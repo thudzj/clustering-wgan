@@ -1,0 +1,6 @@
+log*
+data/*
+ckpt_wgan/*
+logs/*
+ckpt_cwgan/*
+*.pyc
