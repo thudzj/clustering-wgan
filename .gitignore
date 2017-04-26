@@ -4,3 +4,4 @@ ckpt_wgan/*
 logs/*
 ckpt_cwgan/*
 *.pyc
+record

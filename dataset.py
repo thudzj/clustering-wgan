@@ -47,6 +47,12 @@ class DataSet(object):
   def epochs_completed(self):
     return self._epochs_completed
 
+  def shuffle(self):
+    perm = numpy.arange(self._num_examples)
+    numpy.random.shuffle(perm)
+    self._images = self._images[perm]
+    self._labels = self._labels[perm]
+
   def next_batch(self, batch_size, fake_data=False):
     """Return the next `batch_size` examples from this data set."""
     if fake_data:

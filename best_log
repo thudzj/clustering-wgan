@@ -1,0 +1,1234 @@
+(python_jie) hzhang2@h0:~/projects/zhijie$ python -u clustering-gan.py 
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcublas.so.8.0 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcudnn.so.5 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcufft.so.8.0 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcurand.so.8.0 locally
+Extracting ./data/mnist/train-images-idx3-ubyte.gz
+Extracting ./data/mnist/train-labels-idx1-ubyte.gz
+Extracting ./data/mnist/t10k-images-idx3-ubyte.gz
+Extracting ./data/mnist/t10k-labels-idx1-ubyte.gz
+(60000, 32, 32, 1)
+1.0 -1.0
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE3 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+name: GeForce GTX TITAN X
+major: 5 minor: 2 memoryClockRate (GHz) 1.076
+pciBusID 0000:04:00.0
+Total memory: 11.93GiB
+Free memory: 11.82GiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX TITAN X, pci bus id: 0000:04:00.0)
+Training unsupervised wgan...
+/users/hzhang2/projects/zhijie/metrics.py:10: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  w[Y_pred[i], Y[i]] += 1
+  Training ite 0, acc: 0.564704, nmi: 0.557036
+  I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcupti.so.8.0 locally
+  Training ite 99, c_loss_z: 0.101127, c_loss_x: -5.508078, e_loss: 0.151272, g_loss: -12.843172
+  Training ite 100, acc: 0.576623, nmi: 0.532051
+  Training ite 199, c_loss_z: 0.136170, c_loss_x: -3.898320, e_loss: -0.169072, g_loss: -7.003089
+  Training ite 200, acc: 0.583734, nmi: 0.553475
+  Training ite 299, c_loss_z: 0.144088, c_loss_x: -2.260174, e_loss: -0.467899, g_loss: -9.802626
+  Training ite 300, acc: 0.538161, nmi: 0.537533
+  Training ite 399, c_loss_z: -0.017268, c_loss_x: -1.506415, e_loss: -1.376505, g_loss: -5.565969
+  Training ite 400, acc: 0.536358, nmi: 0.548850
+  Training ite 499, c_loss_z: 0.282419, c_loss_x: -1.604295, e_loss: 0.280302, g_loss: -10.487138
+  /users/hzhang2/projects/python_jie/local/lib/python2.7/site-packages/sklearn/mixture/base.py:237: ConvergenceWarning: Initialization 1 did not converged. Try different init parameters, or increase max_iter, tol or check for degenerate data.
+    % (init + 1), ConvergenceWarning)
+    Training ite 500, acc: 0.558393, nmi: 0.528380
+    Training ite 599, c_loss_z: -0.287651, c_loss_x: -1.435382, e_loss: -0.796602, g_loss: -14.693026
+    Training ite 600, acc: 0.561899, nmi: 0.532389
+    Training ite 699, c_loss_z: -0.179848, c_loss_x: -1.547647, e_loss: 2.160190, g_loss: -16.342598
+    Training ite 700, acc: 0.555088, nmi: 0.527705
+    Training ite 799, c_loss_z: -0.063526, c_loss_x: -1.936334, e_loss: 2.047257, g_loss: -11.332016
+    Training ite 800, acc: 0.589143, nmi: 0.555351
+    Training ite 899, c_loss_z: -0.043181, c_loss_x: -0.562218, e_loss: -0.055343, g_loss: -15.673870
+    Training ite 900, acc: 0.580128, nmi: 0.562786
+    Training ite 999, c_loss_z: 0.049838, c_loss_x: -1.205438, e_loss: 1.029514, g_loss: -8.770297
+    Training ite 1000, acc: 0.531751, nmi: 0.514008
+    Training ite 1099, c_loss_z: 0.078846, c_loss_x: -0.702840, e_loss: 0.553491, g_loss: -11.584374
+    Training ite 1100, acc: 0.577023, nmi: 0.608204
+    Training ite 1199, c_loss_z: 0.082608, c_loss_x: -0.913640, e_loss: 0.730406, g_loss: -11.050729
+    Training ite 1200, acc: 0.598558, nmi: 0.601761
+    Training ite 1299, c_loss_z: 0.041591, c_loss_x: -1.225599, e_loss: 0.340569, g_loss: -5.767547
+    Training ite 1300, acc: 0.589343, nmi: 0.591433
+    Training ite 1399, c_loss_z: -0.019102, c_loss_x: -0.652904, e_loss: 1.247517, g_loss: -9.252538
+    Training ite 1400, acc: 0.582632, nmi: 0.619859
+    Training ite 1499, c_loss_z: -0.048352, c_loss_x: -1.069937, e_loss: 0.197034, g_loss: -8.673926
+    Training ite 1500, acc: 0.617288, nmi: 0.613431
+    Training ite 1599, c_loss_z: 0.061860, c_loss_x: -0.394473, e_loss: 0.752490, g_loss: -6.852527
+    Training ite 1600, acc: 0.657552, nmi: 0.631155
+    Training ite 1699, c_loss_z: 0.023262, c_loss_x: -0.524738, e_loss: 0.265078, g_loss: -5.333156
+    Training ite 1700, acc: 0.627003, nmi: 0.608771
+    Training ite 1799, c_loss_z: 0.021471, c_loss_x: -0.836605, e_loss: 0.418618, g_loss: -6.672174
+    Training ite 1800, acc: 0.613381, nmi: 0.619018
+    Training ite 1899, c_loss_z: -0.023168, c_loss_x: -1.457497, e_loss: 0.250043, g_loss: -2.856209
+    Training ite 1900, acc: 0.658153, nmi: 0.645508
+    Training ite 1999, c_loss_z: 0.020907, c_loss_x: -1.030083, e_loss: 0.413447, g_loss: -8.090399
+    Training ite 2000, acc: 0.635417, nmi: 0.624086
+    Training ite 2099, c_loss_z: 0.047125, c_loss_x: -0.605581, e_loss: 0.626802, g_loss: -3.965278
+    Training ite 2100, acc: 0.635517, nmi: 0.647652
+    Training ite 2199, c_loss_z: 0.050807, c_loss_x: -1.193213, e_loss: 0.624456, g_loss: -1.883780
+    Training ite 2200, acc: 0.605769, nmi: 0.612362
+    Training ite 2299, c_loss_z: -0.036983, c_loss_x: -0.661215, e_loss: 0.590921, g_loss: -3.379468
+    Training ite 2300, acc: 0.643630, nmi: 0.630112
+    Training ite 2399, c_loss_z: 0.009954, c_loss_x: -1.478438, e_loss: 0.560014, g_loss: -2.288935
+    Training ite 2400, acc: 0.608974, nmi: 0.606058
+    Training ite 2499, c_loss_z: -0.039578, c_loss_x: -0.769966, e_loss: 0.494454, g_loss: -3.102863
+    Training ite 2500, acc: 0.698518, nmi: 0.657088
+    Training ite 2599, c_loss_z: -0.022202, c_loss_x: -0.500576, e_loss: 0.686663, g_loss: 1.613040
+    Training ite 2600, acc: 0.629307, nmi: 0.640179
+    Training ite 2699, c_loss_z: 0.022027, c_loss_x: -0.543404, e_loss: 0.913392, g_loss: 0.649812
+    Training ite 2700, acc: 0.657652, nmi: 0.625381
+    Training ite 2799, c_loss_z: 0.007496, c_loss_x: -0.300581, e_loss: 0.544468, g_loss: -0.828816
+    Training ite 2800, acc: 0.667768, nmi: 0.675716
+    Training ite 2899, c_loss_z: -0.025404, c_loss_x: -1.276014, e_loss: 0.656745, g_loss: -0.719167
+    Training ite 2900, acc: 0.650741, nmi: 0.646367
+    Training ite 2999, c_loss_z: -0.006808, c_loss_x: -0.695126, e_loss: 0.675246, g_loss: -2.276014
+    Training ite 3000, acc: 0.694010, nmi: 0.675916
+    Training ite 3099, c_loss_z: -0.001464, c_loss_x: -0.203956, e_loss: 0.633927, g_loss: -0.301605
+    Training ite 3100, acc: 0.735477, nmi: 0.707462
+    Training ite 3199, c_loss_z: -0.000747, c_loss_x: -0.162994, e_loss: 0.561474, g_loss: 0.916931
+    Training ite 3200, acc: 0.646034, nmi: 0.652216
+    Training ite 3299, c_loss_z: -0.003205, c_loss_x: -0.637914, e_loss: 0.567989, g_loss: 0.998911
+    Training ite 3300, acc: 0.736679, nmi: 0.688125
+    Training ite 3399, c_loss_z: 0.011956, c_loss_x: -1.200571, e_loss: 0.581059, g_loss: 5.085659
+    Training ite 3400, acc: 0.641627, nmi: 0.694789
+    Training ite 3499, c_loss_z: 0.006125, c_loss_x: -0.518696, e_loss: 0.397523, g_loss: -1.868336
+    Training ite 3500, acc: 0.670974, nmi: 0.647984
+    Training ite 3599, c_loss_z: -0.025473, c_loss_x: -0.839830, e_loss: 0.606607, g_loss: 3.788007
+    Training ite 3600, acc: 0.613882, nmi: 0.643363
+    Training ite 3699, c_loss_z: 0.030273, c_loss_x: -0.613814, e_loss: 0.575763, g_loss: 2.533197
+    Training ite 3700, acc: 0.709135, nmi: 0.685830
+    Training ite 3799, c_loss_z: -0.002049, c_loss_x: -0.872684, e_loss: 0.570604, g_loss: -0.826449
+    Training ite 3800, acc: 0.701623, nmi: 0.678145
+    Training ite 3899, c_loss_z: 0.024763, c_loss_x: -0.476211, e_loss: 0.611949, g_loss: 0.692904
+    Training ite 3900, acc: 0.708934, nmi: 0.686009
+    Training ite 3999, c_loss_z: -0.011600, c_loss_x: -0.564514, e_loss: 0.521861, g_loss: 2.709174
+    Training ite 4000, acc: 0.735176, nmi: 0.693812
+    Training ite 4099, c_loss_z: -0.011790, c_loss_x: -0.396771, e_loss: 0.655144, g_loss: 3.579109
+    Training ite 4100, acc: 0.661859, nmi: 0.668383
+    Training ite 4199, c_loss_z: -0.012405, c_loss_x: -0.497496, e_loss: 0.450571, g_loss: 5.368689
+    Training ite 4200, acc: 0.681791, nmi: 0.669876
+    Training ite 4299, c_loss_z: -0.006389, c_loss_x: -0.258983, e_loss: 0.493102, g_loss: 2.323591
+    Training ite 4300, acc: 0.707632, nmi: 0.679478
+    Training ite 4399, c_loss_z: 0.003190, c_loss_x: -0.622642, e_loss: 0.333625, g_loss: 4.311456
+    Training ite 4400, acc: 0.655148, nmi: 0.683225
+    Training ite 4499, c_loss_z: -0.003680, c_loss_x: -0.853015, e_loss: 0.598212, g_loss: 2.473637
+    Training ite 4500, acc: 0.664062, nmi: 0.661905
+    Training ite 4599, c_loss_z: -0.010801, c_loss_x: -1.674040, e_loss: 0.640179, g_loss: 4.600559
+    Training ite 4600, acc: 0.648538, nmi: 0.670782
+    Training ite 4699, c_loss_z: -0.006640, c_loss_x: -0.323098, e_loss: 0.378025, g_loss: 4.452844
+    Training ite 4700, acc: 0.648237, nmi: 0.653486
+    Training ite 4799, c_loss_z: -0.013731, c_loss_x: -0.812064, e_loss: 0.430385, g_loss: 2.176140
+    Training ite 4800, acc: 0.726462, nmi: 0.689879
+    Training ite 4899, c_loss_z: 0.000667, c_loss_x: -0.716762, e_loss: 0.410610, g_loss: 5.446623
+    Training ite 4900, acc: 0.695012, nmi: 0.682904
+    Training ite 4999, c_loss_z: -0.000014, c_loss_x: -0.941884, e_loss: 0.585388, g_loss: 3.196176
+    Training ite 5000, acc: 0.611378, nmi: 0.655219
+    Training ite 5099, c_loss_z: -0.005669, c_loss_x: -0.707905, e_loss: 0.533609, g_loss: 3.415912
+    Training ite 5100, acc: 0.682091, nmi: 0.700685
+    Training ite 5199, c_loss_z: 0.006005, c_loss_x: -1.317141, e_loss: 0.520947, g_loss: 5.288049
+    Training ite 5200, acc: 0.659255, nmi: 0.655569
+    Training ite 5299, c_loss_z: -0.000810, c_loss_x: -0.894798, e_loss: 0.324634, g_loss: 2.158580
+    Training ite 5300, acc: 0.726062, nmi: 0.698839
+    Training ite 5399, c_loss_z: 0.002092, c_loss_x: -0.657008, e_loss: 0.403896, g_loss: 2.981911
+    Training ite 5400, acc: 0.632712, nmi: 0.665908
+    Training ite 5499, c_loss_z: 0.001036, c_loss_x: -0.481243, e_loss: 0.410009, g_loss: 2.193379
+    Training ite 5500, acc: 0.667067, nmi: 0.663915
+    Training ite 5599, c_loss_z: -0.016543, c_loss_x: -0.864110, e_loss: 0.565708, g_loss: 4.302217
+    Training ite 5600, acc: 0.633413, nmi: 0.669335
+    Training ite 5699, c_loss_z: 0.015416, c_loss_x: -0.600242, e_loss: 0.474591, g_loss: 5.254982
+    Training ite 5700, acc: 0.704627, nmi: 0.682095
+    Training ite 5799, c_loss_z: 0.002015, c_loss_x: -0.608708, e_loss: 0.545829, g_loss: 5.063382
+    Training ite 5800, acc: 0.672676, nmi: 0.693379
+    Training ite 5899, c_loss_z: -0.002507, c_loss_x: -0.631481, e_loss: 0.601030, g_loss: 2.214574
+    Training ite 5900, acc: 0.671975, nmi: 0.662440
+    Training ite 5999, c_loss_z: -0.007900, c_loss_x: -0.970013, e_loss: 0.436327, g_loss: 5.054622
+    Training ite 6000, acc: 0.733273, nmi: 0.700063
+    Training ite 6099, c_loss_z: -0.007557, c_loss_x: -0.620703, e_loss: 0.455146, g_loss: 1.601315
+    Training ite 6100, acc: 0.678385, nmi: 0.661345
+    Training ite 6199, c_loss_z: 0.006314, c_loss_x: -0.238482, e_loss: 0.537394, g_loss: 5.257762
+    Training ite 6200, acc: 0.722055, nmi: 0.687818
+    Training ite 6299, c_loss_z: 0.010606, c_loss_x: -0.626168, e_loss: 0.652048, g_loss: 3.453452
+    Training ite 6300, acc: 0.715946, nmi: 0.681420
+    Training ite 6399, c_loss_z: -0.013162, c_loss_x: -0.437111, e_loss: 0.444589, g_loss: 6.921776
+    Training ite 6400, acc: 0.622796, nmi: 0.676580
+    Training ite 6499, c_loss_z: 0.012464, c_loss_x: -0.406953, e_loss: 0.485957, g_loss: 4.659167
+    Training ite 6500, acc: 0.604667, nmi: 0.657688
+    Training ite 6599, c_loss_z: -0.006476, c_loss_x: -0.856191, e_loss: 0.473185, g_loss: 6.213866
+    Training ite 6600, acc: 0.629207, nmi: 0.677220
+    Training ite 6699, c_loss_z: -0.009436, c_loss_x: -0.892420, e_loss: 0.454343, g_loss: 4.523046
+    Training ite 6700, acc: 0.671775, nmi: 0.669568
+    Training ite 6799, c_loss_z: 0.000748, c_loss_x: -0.414799, e_loss: 0.490694, g_loss: 4.902545
+    Training ite 6800, acc: 0.626002, nmi: 0.665652
+    Training ite 6899, c_loss_z: -0.021238, c_loss_x: -0.961398, e_loss: 0.200373, g_loss: 3.583946
+    Training ite 6900, acc: 0.629808, nmi: 0.674850
+    Training ite 6999, c_loss_z: -0.003676, c_loss_x: -0.858818, e_loss: 0.494760, g_loss: 5.821310
+    Training ite 7000, acc: 0.666166, nmi: 0.664791
+    Training ite 7099, c_loss_z: -0.001961, c_loss_x: -1.005450, e_loss: 0.111138, g_loss: 1.465618
+    Training ite 7100, acc: 0.635417, nmi: 0.678647
+    Training ite 7199, c_loss_z: -0.008192, c_loss_x: -0.598506, e_loss: 0.414652, g_loss: 7.672501
+    Training ite 7200, acc: 0.666266, nmi: 0.702136
+    Training ite 7299, c_loss_z: -0.010968, c_loss_x: -0.851048, e_loss: 0.591726, g_loss: 1.884927
+    Training ite 7300, acc: 0.716847, nmi: 0.703120
+    Training ite 7399, c_loss_z: 0.002179, c_loss_x: -0.870947, e_loss: 0.465246, g_loss: 4.284066
+    Training ite 7400, acc: 0.585236, nmi: 0.656309
+    Training ite 7499, c_loss_z: -0.000774, c_loss_x: -1.200935, e_loss: 0.430805, g_loss: 3.231586
+    Training ite 7500, acc: 0.704427, nmi: 0.691432
+    Training ite 7599, c_loss_z: -0.008422, c_loss_x: -0.882532, e_loss: 0.564717, g_loss: 4.280834
+    Training ite 7600, acc: 0.703826, nmi: 0.717899
+    Training ite 7699, c_loss_z: -0.006378, c_loss_x: -0.951611, e_loss: 0.475288, g_loss: 3.277892
+    Training ite 7700, acc: 0.700421, nmi: 0.690123
+    Training ite 7799, c_loss_z: -0.011864, c_loss_x: -0.511618, e_loss: 0.468840, g_loss: 3.472998
+    Training ite 7800, acc: 0.671274, nmi: 0.662775
+    Training ite 7899, c_loss_z: 0.010695, c_loss_x: -0.646971, e_loss: 0.244552, g_loss: 1.617167
+    Training ite 7900, acc: 0.626002, nmi: 0.681156
+    Training ite 7999, c_loss_z: 0.002064, c_loss_x: -0.617893, e_loss: 0.343379, g_loss: 4.458109
+    Training ite 8000, acc: 0.703526, nmi: 0.705785
+    Training ite 8099, c_loss_z: -0.006526, c_loss_x: -0.793385, e_loss: 0.165203, g_loss: 2.609000
+    Training ite 8100, acc: 0.685397, nmi: 0.704069
+    Training ite 8199, c_loss_z: 0.011769, c_loss_x: -0.537328, e_loss: 0.446008, g_loss: 3.378555
+    Training ite 8200, acc: 0.674579, nmi: 0.723952
+    Training ite 8299, c_loss_z: -0.007281, c_loss_x: -0.226539, e_loss: 0.461511, g_loss: 1.127209
+    Training ite 8300, acc: 0.650541, nmi: 0.687087
+    Training ite 8399, c_loss_z: -0.006910, c_loss_x: -0.907934, e_loss: 0.526424, g_loss: 5.195407
+    Training ite 8400, acc: 0.731070, nmi: 0.721213
+    Training ite 8499, c_loss_z: 0.001284, c_loss_x: -0.335887, e_loss: 0.273668, g_loss: 1.950798
+    Training ite 8500, acc: 0.713341, nmi: 0.695644
+    Training ite 8599, c_loss_z: 0.005213, c_loss_x: -0.361617, e_loss: 0.327486, g_loss: 0.990157
+    Training ite 8600, acc: 0.697015, nmi: 0.686700
+    Training ite 8699, c_loss_z: -0.009473, c_loss_x: -0.907450, e_loss: 0.262863, g_loss: 0.547751
+    Training ite 8700, acc: 0.634515, nmi: 0.680179
+    Training ite 8799, c_loss_z: -0.010529, c_loss_x: -0.434293, e_loss: 0.281140, g_loss: 4.372093
+    Training ite 8800, acc: 0.681390, nmi: 0.715711
+    Training ite 8899, c_loss_z: 0.004987, c_loss_x: -0.765331, e_loss: 0.324617, g_loss: 7.096492
+    Training ite 8900, acc: 0.649539, nmi: 0.686653
+    Training ite 8999, c_loss_z: 0.005838, c_loss_x: -0.693542, e_loss: 0.305568, g_loss: 4.112792
+    Training ite 9000, acc: 0.725761, nmi: 0.713869
+    Training ite 9099, c_loss_z: -0.000559, c_loss_x: -0.561958, e_loss: 0.186538, g_loss: 6.470509
+    Training ite 9100, acc: 0.672676, nmi: 0.700077
+    Training ite 9199, c_loss_z: -0.000179, c_loss_x: -0.549318, e_loss: -0.013914, g_loss: 2.121266
+    Training ite 9200, acc: 0.799279, nmi: 0.757367
+    Training ite 9299, c_loss_z: -0.010397, c_loss_x: -0.536657, e_loss: 0.240829, g_loss: 4.372798
+    Training ite 9300, acc: 0.709235, nmi: 0.711964
+    Training ite 9399, c_loss_z: -0.009620, c_loss_x: -0.758993, e_loss: 0.343021, g_loss: 4.631768
+    Training ite 9400, acc: 0.638622, nmi: 0.683785
+    Training ite 9499, c_loss_z: 0.003714, c_loss_x: -0.506366, e_loss: 0.365643, g_loss: 3.228336
+    Training ite 9500, acc: 0.621595, nmi: 0.679939
+    Training ite 9599, c_loss_z: 0.000235, c_loss_x: -0.628796, e_loss: 0.461937, g_loss: 5.345240
+    Training ite 9600, acc: 0.706030, nmi: 0.714854
+    Training ite 9699, c_loss_z: -0.008645, c_loss_x: -0.667618, e_loss: 0.120692, g_loss: 4.981616
+    Training ite 9700, acc: 0.699319, nmi: 0.724624
+    Training ite 9799, c_loss_z: 0.005698, c_loss_x: -0.799273, e_loss: 0.162935, g_loss: 5.026826
+    Training ite 9800, acc: 0.718349, nmi: 0.731277
+    Training ite 9899, c_loss_z: 0.003025, c_loss_x: -0.351281, e_loss: 0.126129, g_loss: 6.922133
+    Training ite 9900, acc: 0.603666, nmi: 0.692542
+    Training ite 9999, c_loss_z: -0.101008, c_loss_x: -0.376963, e_loss: -0.040168, g_loss: 3.117456
+    Training ite 10000, acc: 0.677584, nmi: 0.694960
+    Training ite 10099, c_loss_z: 0.007286, c_loss_x: -0.757133, e_loss: 0.069538, g_loss: 5.366640
+    Training ite 10100, acc: 0.749099, nmi: 0.716714
+    Training ite 10199, c_loss_z: 0.001444, c_loss_x: -0.406051, e_loss: 0.043660, g_loss: 2.523490
+    Training ite 10200, acc: 0.683393, nmi: 0.705655
+    Training ite 10299, c_loss_z: -0.001729, c_loss_x: -0.476130, e_loss: 0.141706, g_loss: 4.648596
+    Training ite 10300, acc: 0.627003, nmi: 0.679384
+    Training ite 10399, c_loss_z: -0.000562, c_loss_x: -0.737518, e_loss: 0.187136, g_loss: 3.092839
+    Training ite 10400, acc: 0.709335, nmi: 0.694328
+    Training ite 10499, c_loss_z: -0.007217, c_loss_x: -0.395783, e_loss: 0.144829, g_loss: 3.011614
+    Training ite 10500, acc: 0.652945, nmi: 0.692556
+    Training ite 10599, c_loss_z: -0.009350, c_loss_x: -0.878738, e_loss: 0.085297, g_loss: 4.465111
+    Training ite 10600, acc: 0.738782, nmi: 0.706612
+    Training ite 10699, c_loss_z: -0.032658, c_loss_x: -0.671011, e_loss: -0.187468, g_loss: 4.571970
+    Training ite 10700, acc: 0.735276, nmi: 0.721753
+    Training ite 10799, c_loss_z: -0.004929, c_loss_x: -0.348333, e_loss: -0.163385, g_loss: 3.276303
+    Training ite 10800, acc: 0.688101, nmi: 0.705671
+    Training ite 10899, c_loss_z: 0.026557, c_loss_x: -0.108662, e_loss: 0.592008, g_loss: 6.947740
+    Training ite 10900, acc: 0.644531, nmi: 0.681488
+    Training ite 10999, c_loss_z: -0.059185, c_loss_x: -0.369926, e_loss: 0.156981, g_loss: 0.598564
+    Training ite 11000, acc: 0.629207, nmi: 0.666713
+    Training ite 11099, c_loss_z: 0.021053, c_loss_x: -0.413123, e_loss: 0.279989, g_loss: 2.798743
+    Training ite 11100, acc: 0.681691, nmi: 0.697482
+    Training ite 11199, c_loss_z: 0.017942, c_loss_x: -0.713856, e_loss: 0.664164, g_loss: 3.582631
+    Training ite 11200, acc: 0.719952, nmi: 0.692289
+    Training ite 11299, c_loss_z: 0.008917, c_loss_x: -1.032442, e_loss: 0.482716, g_loss: 4.472352
+    Training ite 11300, acc: 0.639724, nmi: 0.669331
+    Training ite 11399, c_loss_z: 0.011514, c_loss_x: -0.588948, e_loss: 0.558086, g_loss: 1.474809
+    Training ite 11400, acc: 0.673478, nmi: 0.682380
+    Training ite 11499, c_loss_z: -0.008125, c_loss_x: -0.616186, e_loss: 0.497405, g_loss: 2.849575
+    Training ite 11500, acc: 0.754107, nmi: 0.716832
+    Training ite 11599, c_loss_z: 0.014866, c_loss_x: 0.044653, e_loss: 0.383059, g_loss: 3.684641
+    Training ite 11600, acc: 0.750300, nmi: 0.732545
+    Training ite 11699, c_loss_z: -0.004738, c_loss_x: -0.681066, e_loss: 0.368417, g_loss: 2.288070
+    Training ite 11700, acc: 0.656450, nmi: 0.674025
+    Training ite 11799, c_loss_z: -0.001273, c_loss_x: -0.616121, e_loss: 0.445658, g_loss: -0.498012
+    Training ite 11800, acc: 0.706130, nmi: 0.711654
+    Training ite 11899, c_loss_z: 0.009512, c_loss_x: -0.825534, e_loss: 0.377983, g_loss: 1.348204
+    Training ite 11900, acc: 0.768530, nmi: 0.745930
+    Training ite 11999, c_loss_z: -0.003078, c_loss_x: -0.222544, e_loss: 0.460432, g_loss: 3.679508
+    Training ite 12000, acc: 0.641827, nmi: 0.688964
+    Training ite 12099, c_loss_z: -0.000848, c_loss_x: -0.688270, e_loss: 0.183821, g_loss: 6.207511
+    Training ite 12100, acc: 0.705929, nmi: 0.729678
+    Training ite 12199, c_loss_z: 0.162881, c_loss_x: -0.336574, e_loss: -0.002987, g_loss: -0.482452
+    Training ite 12200, acc: 0.710637, nmi: 0.731385
+    Training ite 12299, c_loss_z: -0.006324, c_loss_x: -0.755719, e_loss: -0.224784, g_loss: 5.535734
+    Training ite 12300, acc: 0.621394, nmi: 0.670988
+    Training ite 12399, c_loss_z: 0.001521, c_loss_x: -1.016417, e_loss: -0.096297, g_loss: 3.194706
+    Training ite 12400, acc: 0.705329, nmi: 0.711237
+    Training ite 12499, c_loss_z: -0.003847, c_loss_x: -0.711399, e_loss: -0.187357, g_loss: 3.402442
+    Training ite 12500, acc: 0.694611, nmi: 0.697560
+    Training ite 12599, c_loss_z: 0.038665, c_loss_x: -0.352228, e_loss: -0.284158, g_loss: 2.418826
+    Training ite 12600, acc: 0.747596, nmi: 0.723949
+    Training ite 12699, c_loss_z: -0.003215, c_loss_x: -1.192100, e_loss: -0.254503, g_loss: 1.191470
+    Training ite 12700, acc: 0.687400, nmi: 0.721219
+    Training ite 12799, c_loss_z: 0.012031, c_loss_x: -0.636572, e_loss: -0.063377, g_loss: -1.181261
+    Training ite 12800, acc: 0.651142, nmi: 0.696094
+    Training ite 12899, c_loss_z: -0.000578, c_loss_x: -0.747593, e_loss: -0.187306, g_loss: 3.931572
+    Training ite 12900, acc: 0.732973, nmi: 0.744342
+    Training ite 12999, c_loss_z: 0.007117, c_loss_x: -1.575272, e_loss: -0.167075, g_loss: 2.971479
+    Training ite 13000, acc: 0.727664, nmi: 0.753560
+    Training ite 13099, c_loss_z: 0.007136, c_loss_x: -0.091637, e_loss: -0.023609, g_loss: 1.410732
+    Training ite 13100, acc: 0.701623, nmi: 0.738515
+    Training ite 13199, c_loss_z: 0.004424, c_loss_x: -0.804799, e_loss: -0.241816, g_loss: 1.404228
+    Training ite 13200, acc: 0.697917, nmi: 0.729606
+    Training ite 13299, c_loss_z: 0.004852, c_loss_x: -0.494249, e_loss: -0.265544, g_loss: 0.036802
+    Training ite 13300, acc: 0.790264, nmi: 0.773180
+    Training ite 13399, c_loss_z: 0.007613, c_loss_x: -0.464114, e_loss: -0.011245, g_loss: 7.173514
+    Training ite 13400, acc: 0.681791, nmi: 0.726156
+    Training ite 13499, c_loss_z: -0.004718, c_loss_x: -0.598982, e_loss: -0.161795, g_loss: 2.278402
+    Training ite 13500, acc: 0.779848, nmi: 0.763591
+    Training ite 13599, c_loss_z: 0.001513, c_loss_x: -0.923610, e_loss: -0.184871, g_loss: 0.559095
+    Training ite 13600, acc: 0.709635, nmi: 0.742368
+    Training ite 13699, c_loss_z: -0.004404, c_loss_x: 0.030007, e_loss: -0.210295, g_loss: 3.087354
+    Training ite 13700, acc: 0.786859, nmi: 0.755116
+    Training ite 13799, c_loss_z: 0.038915, c_loss_x: -0.426818, e_loss: -0.551135, g_loss: 0.516225
+    Training ite 13800, acc: 0.716647, nmi: 0.754948
+    Training ite 13899, c_loss_z: -0.002889, c_loss_x: -0.016121, e_loss: -0.333611, g_loss: 0.817140
+    Training ite 13900, acc: 0.654046, nmi: 0.700184
+    Training ite 13999, c_loss_z: -0.004094, c_loss_x: -0.492105, e_loss: -0.135567, g_loss: 0.184814
+    Training ite 14000, acc: 0.693309, nmi: 0.726018
+    Training ite 14099, c_loss_z: -0.004177, c_loss_x: -0.904921, e_loss: -0.193813, g_loss: 0.597212
+    Training ite 14100, acc: 0.775841, nmi: 0.746102
+    Training ite 14199, c_loss_z: -0.006622, c_loss_x: -0.714681, e_loss: -0.211758, g_loss: 0.779289
+    Training ite 14200, acc: 0.753706, nmi: 0.730775
+    Training ite 14299, c_loss_z: -0.000503, c_loss_x: -0.117639, e_loss: -0.096153, g_loss: -0.272961
+    Training ite 14300, acc: 0.771835, nmi: 0.744809
+    Training ite 14399, c_loss_z: 0.031152, c_loss_x: -0.734138, e_loss: -0.439439, g_loss: 0.848420
+    Training ite 14400, acc: 0.733474, nmi: 0.726290
+    Training ite 14499, c_loss_z: 0.001782, c_loss_x: -0.669742, e_loss: -0.366078, g_loss: 0.093506
+    Training ite 14500, acc: 0.712340, nmi: 0.721242
+    Training ite 14599, c_loss_z: -0.002345, c_loss_x: -0.712501, e_loss: -0.256769, g_loss: 3.002282
+    Training ite 14600, acc: 0.708834, nmi: 0.740725
+    Training ite 14699, c_loss_z: 0.004822, c_loss_x: -0.857992, e_loss: -0.301653, g_loss: 5.616057
+    Training ite 14700, acc: 0.788762, nmi: 0.766365
+    Training ite 14799, c_loss_z: -0.004546, c_loss_x: -0.372239, e_loss: -0.274737, g_loss: 0.056245
+    Training ite 14800, acc: 0.717248, nmi: 0.725724
+    Training ite 14899, c_loss_z: -0.000955, c_loss_x: -0.851060, e_loss: -0.305941, g_loss: 2.154497
+    Training ite 14900, acc: 0.715044, nmi: 0.744798
+    Training ite 14999, c_loss_z: 0.003091, c_loss_x: -0.240255, e_loss: -0.352420, g_loss: -0.172710
+    Training ite 15000, acc: 0.710337, nmi: 0.745491
+    Training ite 15099, c_loss_z: -0.003556, c_loss_x: -0.529450, e_loss: -0.296584, g_loss: -1.199091
+    Training ite 15100, acc: 0.727264, nmi: 0.764212
+    Training ite 15199, c_loss_z: -0.001231, c_loss_x: -0.369298, e_loss: -0.288730, g_loss: -2.628463
+    Training ite 15200, acc: 0.699720, nmi: 0.738162
+    Training ite 15299, c_loss_z: 0.006616, c_loss_x: -0.454274, e_loss: -0.292446, g_loss: 0.147015
+    Training ite 15300, acc: 0.706831, nmi: 0.751395
+    Training ite 15399, c_loss_z: 0.009137, c_loss_x: 0.072373, e_loss: -0.214972, g_loss: 1.188640
+    Training ite 15400, acc: 0.718850, nmi: 0.749746
+    Training ite 15499, c_loss_z: 0.004410, c_loss_x: -0.381132, e_loss: -0.259734, g_loss: -0.230111
+    Training ite 15500, acc: 0.714643, nmi: 0.742821
+    Training ite 15599, c_loss_z: -0.001496, c_loss_x: -1.055313, e_loss: -0.061835, g_loss: -0.494685
+    Training ite 15600, acc: 0.671775, nmi: 0.703003
+    Training ite 15699, c_loss_z: 0.007223, c_loss_x: -0.473706, e_loss: -0.049392, g_loss: -1.744009
+    Training ite 15700, acc: 0.729567, nmi: 0.737066
+    Training ite 15799, c_loss_z: 0.008667, c_loss_x: -0.736855, e_loss: -0.046692, g_loss: -0.495658
+    Training ite 15800, acc: 0.689704, nmi: 0.722160
+    Training ite 15899, c_loss_z: 0.003140, c_loss_x: -0.760478, e_loss: 0.055206, g_loss: -0.830176
+    Training ite 15900, acc: 0.724259, nmi: 0.756431
+    Training ite 15999, c_loss_z: -0.004023, c_loss_x: -0.182680, e_loss: -0.025185, g_loss: 0.815182
+    Training ite 16000, acc: 0.672276, nmi: 0.708406
+    Training ite 16099, c_loss_z: -0.002727, c_loss_x: -0.067837, e_loss: -0.003530, g_loss: 2.929522
+    Training ite 16100, acc: 0.715545, nmi: 0.748889
+    Training ite 16199, c_loss_z: 0.000805, c_loss_x: -0.667281, e_loss: -0.121049, g_loss: -1.689298
+    Training ite 16200, acc: 0.700921, nmi: 0.743691
+    Training ite 16299, c_loss_z: 0.003588, c_loss_x: -0.847855, e_loss: -0.131012, g_loss: -1.909837
+    Training ite 16300, acc: 0.716446, nmi: 0.745271
+    Training ite 16399, c_loss_z: 0.003925, c_loss_x: -0.661758, e_loss: -0.021866, g_loss: -2.221002
+    Training ite 16400, acc: 0.727865, nmi: 0.751665
+    Training ite 16499, c_loss_z: 0.004747, c_loss_x: -0.669783, e_loss: -0.054116, g_loss: -0.001715
+    Training ite 16500, acc: 0.778646, nmi: 0.754614
+    Training ite 16599, c_loss_z: -0.000862, c_loss_x: -0.483160, e_loss: -0.089878, g_loss: -2.433537
+    Training ite 16600, acc: 0.704026, nmi: 0.750954
+    Training ite 16699, c_loss_z: 0.003412, c_loss_x: -0.711299, e_loss: -0.154645, g_loss: 1.352375
+    Training ite 16700, acc: 0.672676, nmi: 0.701585
+    Training ite 16799, c_loss_z: 0.001110, c_loss_x: -0.354170, e_loss: -0.136611, g_loss: -5.512812
+    Training ite 16800, acc: 0.700521, nmi: 0.750680
+    Training ite 16899, c_loss_z: -0.004892, c_loss_x: -0.888136, e_loss: -0.274018, g_loss: -0.032462
+    Training ite 16900, acc: 0.705429, nmi: 0.747764
+    Training ite 16999, c_loss_z: -0.000452, c_loss_x: -0.646979, e_loss: -0.153936, g_loss: -1.284435
+    Training ite 17000, acc: 0.708233, nmi: 0.737883
+    Training ite 17099, c_loss_z: -0.004460, c_loss_x: -0.783587, e_loss: -0.090388, g_loss: -0.736766
+    Training ite 17100, acc: 0.709034, nmi: 0.745649
+    Training ite 17199, c_loss_z: 0.003114, c_loss_x: -0.262285, e_loss: -0.135938, g_loss: 0.121728
+    Training ite 17200, acc: 0.749499, nmi: 0.763866
+    Training ite 17299, c_loss_z: 0.002373, c_loss_x: -0.883432, e_loss: -0.051882, g_loss: -0.397776
+    Training ite 17300, acc: 0.701623, nmi: 0.744765
+    Training ite 17399, c_loss_z: 0.001118, c_loss_x: -0.948953, e_loss: -0.218530, g_loss: 0.829129
+    Training ite 17400, acc: 0.705028, nmi: 0.749654
+    Training ite 17499, c_loss_z: 0.001695, c_loss_x: -0.638353, e_loss: -0.062126, g_loss: 1.233555
+    Training ite 17500, acc: 0.711739, nmi: 0.727337
+    Training ite 17599, c_loss_z: -0.000427, c_loss_x: -0.321237, e_loss: -0.159343, g_loss: 1.877564
+    Training ite 17600, acc: 0.704627, nmi: 0.743416
+    Training ite 17699, c_loss_z: -0.005354, c_loss_x: 0.329970, e_loss: -0.167671, g_loss: -1.032724
+    Training ite 17700, acc: 0.730769, nmi: 0.742455
+    Training ite 17799, c_loss_z: -0.000245, c_loss_x: -0.449283, e_loss: -0.119816, g_loss: -1.556840
+    Training ite 17800, acc: 0.719551, nmi: 0.759825
+    Training ite 17899, c_loss_z: -0.009805, c_loss_x: -0.566875, e_loss: -0.148452, g_loss: -0.923384
+    Training ite 17900, acc: 0.678185, nmi: 0.712261
+    Training ite 17999, c_loss_z: -0.000990, c_loss_x: -0.606615, e_loss: -0.111354, g_loss: -2.490453
+    Training ite 18000, acc: 0.791567, nmi: 0.776192
+    Training ite 18099, c_loss_z: -0.005074, c_loss_x: -0.596480, e_loss: -0.124936, g_loss: -0.987902
+    Training ite 18100, acc: 0.702023, nmi: 0.754112
+    Training ite 18199, c_loss_z: -0.002977, c_loss_x: -0.463308, e_loss: -0.224049, g_loss: 0.576599
+    Training ite 18200, acc: 0.699920, nmi: 0.741998
+    Training ite 18299, c_loss_z: 0.007151, c_loss_x: -0.832877, e_loss: -0.080141, g_loss: -3.213369
+    Training ite 18300, acc: 0.703125, nmi: 0.741959
+    Training ite 18399, c_loss_z: 0.005982, c_loss_x: -0.582273, e_loss: -0.152169, g_loss: -5.385966
+    Training ite 18400, acc: 0.681290, nmi: 0.713643
+    Training ite 18499, c_loss_z: -0.005799, c_loss_x: -0.904587, e_loss: -0.158395, g_loss: -0.956382
+    Training ite 18500, acc: 0.780549, nmi: 0.755664
+    Training ite 18599, c_loss_z: -0.000188, c_loss_x: -0.543643, e_loss: -0.262579, g_loss: -0.656176
+    Training ite 18600, acc: 0.782051, nmi: 0.759416
+    Training ite 18699, c_loss_z: 0.004076, c_loss_x: -0.840902, e_loss: -0.134321, g_loss: -0.270035
+    Training ite 18700, acc: 0.705629, nmi: 0.751083
+    Training ite 18799, c_loss_z: -0.000838, c_loss_x: -0.648274, e_loss: -0.145557, g_loss: 0.102779
+    Training ite 18800, acc: 0.695613, nmi: 0.753275
+    Training ite 18899, c_loss_z: 0.000333, c_loss_x: -0.474104, e_loss: -0.141984, g_loss: -4.727135
+    Training ite 18900, acc: 0.707532, nmi: 0.745097
+    Training ite 18999, c_loss_z: 0.011208, c_loss_x: -0.528463, e_loss: -0.162488, g_loss: -1.569183
+    Training ite 19000, acc: 0.722055, nmi: 0.751305
+    Training ite 19099, c_loss_z: -0.005032, c_loss_x: -0.714864, e_loss: -0.162906, g_loss: -3.280415
+    Training ite 19100, acc: 0.786959, nmi: 0.759137
+    Training ite 19199, c_loss_z: -0.007042, c_loss_x: -0.605327, e_loss: -0.186105, g_loss: -1.842003
+    Training ite 19200, acc: 0.705729, nmi: 0.754040
+    Training ite 19299, c_loss_z: -0.000513, c_loss_x: -0.277551, e_loss: -0.191452, g_loss: -5.079197
+    Training ite 19300, acc: 0.708734, nmi: 0.759088
+    Training ite 19399, c_loss_z: -0.004079, c_loss_x: -0.631973, e_loss: -0.143514, g_loss: -6.363817
+    Training ite 19400, acc: 0.671875, nmi: 0.709273
+    Training ite 19499, c_loss_z: 0.000119, c_loss_x: -0.460042, e_loss: -0.267025, g_loss: 0.836212
+    Training ite 19500, acc: 0.808794, nmi: 0.784128
+    Training ite 19599, c_loss_z: -0.000767, c_loss_x: -0.380433, e_loss: -0.189088, g_loss: -2.657551
+    Training ite 19600, acc: 0.797376, nmi: 0.772423
+    Training ite 19699, c_loss_z: -0.001883, c_loss_x: -0.596011, e_loss: -0.088302, g_loss: -1.937575
+    Training ite 19700, acc: 0.797877, nmi: 0.771760
+    Training ite 19799, c_loss_z: 0.002661, c_loss_x: -0.816412, e_loss: -0.188141, g_loss: -3.519738
+    Training ite 19800, acc: 0.774339, nmi: 0.753584
+    Training ite 19899, c_loss_z: 0.002981, c_loss_x: -0.729268, e_loss: -0.095956, g_loss: -3.605187
+    Training ite 19900, acc: 0.705829, nmi: 0.754406
+    Training ite 19999, c_loss_z: -0.003887, c_loss_x: -0.773682, e_loss: -0.069132, g_loss: -1.746679
+    Training ite 20000, acc: 0.682091, nmi: 0.716676
+    Training ite 20099, c_loss_z: -0.003350, c_loss_x: -0.524231, e_loss: 0.073310, g_loss: -3.221977
+    Training ite 20100, acc: 0.772837, nmi: 0.755500
+    Training ite 20199, c_loss_z: 0.001128, c_loss_x: -0.730842, e_loss: 0.144852, g_loss: -3.559143
+    Training ite 20200, acc: 0.791667, nmi: 0.771664
+    Training ite 20299, c_loss_z: 0.011181, c_loss_x: -0.536064, e_loss: 0.150668, g_loss: -1.135134
+    Training ite 20300, acc: 0.703626, nmi: 0.742870
+    Training ite 20399, c_loss_z: 0.001359, c_loss_x: -0.670833, e_loss: 0.157247, g_loss: -0.932091
+    Training ite 20400, acc: 0.698417, nmi: 0.747694
+    Training ite 20499, c_loss_z: 0.021800, c_loss_x: -0.777068, e_loss: 0.384599, g_loss: -0.311591
+    Training ite 20500, acc: 0.778245, nmi: 0.756080
+    Training ite 20599, c_loss_z: 0.008357, c_loss_x: -0.599839, e_loss: 0.158329, g_loss: -4.486468
+    Training ite 20600, acc: 0.698618, nmi: 0.743792
+    Training ite 20699, c_loss_z: 0.005974, c_loss_x: -0.646800, e_loss: 0.174318, g_loss: -3.231889
+    Training ite 20700, acc: 0.705729, nmi: 0.749510
+    Training ite 20799, c_loss_z: -0.002626, c_loss_x: -0.686520, e_loss: 0.026054, g_loss: -1.756220
+    Training ite 20800, acc: 0.708934, nmi: 0.750991
+    Training ite 20899, c_loss_z: 0.004013, c_loss_x: -0.710936, e_loss: 0.108442, g_loss: -2.855496
+    Training ite 20900, acc: 0.699720, nmi: 0.744166
+    Training ite 20999, c_loss_z: 0.001377, c_loss_x: -0.670371, e_loss: -0.053412, g_loss: -0.630695
+    Training ite 21000, acc: 0.686498, nmi: 0.713042
+    Training ite 21099, c_loss_z: -0.003857, c_loss_x: -0.833766, e_loss: -0.050131, g_loss: -4.288782
+    Training ite 21100, acc: 0.706330, nmi: 0.753605
+    Training ite 21199, c_loss_z: -0.004011, c_loss_x: -0.631828, e_loss: 0.012833, g_loss: -3.691173
+    Training ite 21200, acc: 0.729067, nmi: 0.735211
+    Training ite 21299, c_loss_z: 0.000225, c_loss_x: -0.571427, e_loss: -0.085925, g_loss: -2.753725
+    Training ite 21300, acc: 0.811398, nmi: 0.785407
+    Training ite 21399, c_loss_z: -0.001885, c_loss_x: -0.954019, e_loss: -0.085459, g_loss: -6.241369
+    Training ite 21400, acc: 0.726963, nmi: 0.750929
+    Training ite 21499, c_loss_z: -0.026271, c_loss_x: -0.312139, e_loss: -0.314037, g_loss: -4.296749
+    Training ite 21500, acc: 0.668870, nmi: 0.701711
+    Training ite 21599, c_loss_z: -0.000065, c_loss_x: -0.953499, e_loss: -0.160409, g_loss: -4.702064
+    Training ite 21600, acc: 0.783454, nmi: 0.756278
+    Training ite 21699, c_loss_z: 0.008487, c_loss_x: -0.161511, e_loss: -0.043855, g_loss: -4.559317
+    Training ite 21700, acc: 0.712941, nmi: 0.733748
+    Training ite 21799, c_loss_z: -0.002935, c_loss_x: -0.904996, e_loss: -0.047927, g_loss: -2.657872
+    Training ite 21800, acc: 0.719351, nmi: 0.749664
+    Training ite 21899, c_loss_z: 0.006912, c_loss_x: -0.999715, e_loss: 0.034098, g_loss: -1.624532
+    Training ite 21900, acc: 0.705629, nmi: 0.749060
+    Training ite 21999, c_loss_z: 0.003145, c_loss_x: -0.405090, e_loss: -0.109163, g_loss: -0.569842
+    Training ite 22000, acc: 0.717949, nmi: 0.741274
+    Training ite 22099, c_loss_z: 0.003205, c_loss_x: -0.989309, e_loss: -0.104033, g_loss: -4.954459
+    Training ite 22100, acc: 0.685397, nmi: 0.701784
+    Training ite 22199, c_loss_z: -0.002168, c_loss_x: -0.731802, e_loss: -0.232486, g_loss: -1.812610
+    Training ite 22200, acc: 0.687500, nmi: 0.742477
+    Training ite 22299, c_loss_z: -0.002389, c_loss_x: -0.753775, e_loss: -0.290510, g_loss: -4.564978
+    Training ite 22300, acc: 0.703425, nmi: 0.749916
+    Training ite 22399, c_loss_z: 0.005403, c_loss_x: -0.572590, e_loss: -0.248415, g_loss: -5.960262
+    Training ite 22400, acc: 0.741386, nmi: 0.756850
+    Training ite 22499, c_loss_z: -0.000992, c_loss_x: -0.858112, e_loss: -0.267025, g_loss: -3.255078
+    Training ite 22500, acc: 0.778646, nmi: 0.751820
+    Training ite 22599, c_loss_z: -0.003906, c_loss_x: -0.603421, e_loss: -0.178543, g_loss: -1.909282
+    Training ite 22600, acc: 0.820312, nmi: 0.800072
+    Training ite 22699, c_loss_z: -0.003304, c_loss_x: -0.290062, e_loss: -0.133375, g_loss: -3.678160
+    Training ite 22700, acc: 0.811498, nmi: 0.787546
+    Training ite 22799, c_loss_z: 0.000048, c_loss_x: -0.560460, e_loss: -0.052144, g_loss: -2.817094
+    Training ite 22800, acc: 0.700621, nmi: 0.751396
+    Training ite 22899, c_loss_z: 0.004780, c_loss_x: -0.091780, e_loss: -0.059176, g_loss: -3.763577
+    Training ite 22900, acc: 0.712540, nmi: 0.763624
+    Training ite 22999, c_loss_z: 0.000232, c_loss_x: -0.371395, e_loss: -0.216404, g_loss: -2.891533
+    Training ite 23000, acc: 0.774139, nmi: 0.755700
+    Training ite 23099, c_loss_z: 0.003622, c_loss_x: -0.048074, e_loss: -0.253571, g_loss: -4.560369
+    Training ite 23100, acc: 0.778245, nmi: 0.758628
+    Training ite 23199, c_loss_z: -0.001903, c_loss_x: -0.889592, e_loss: -0.081681, g_loss: -2.183229
+    Training ite 23200, acc: 0.785256, nmi: 0.756054
+    Training ite 23299, c_loss_z: -0.003928, c_loss_x: -0.155155, e_loss: -0.065475, g_loss: -4.954907
+    Training ite 23300, acc: 0.707933, nmi: 0.737300
+    Training ite 23399, c_loss_z: -0.000539, c_loss_x: -0.454459, e_loss: -0.092427, g_loss: -4.449640
+    Training ite 23400, acc: 0.711639, nmi: 0.763076
+    Training ite 23499, c_loss_z: 0.004582, c_loss_x: -0.337407, e_loss: -0.020039, g_loss: -4.145483
+    Training ite 23500, acc: 0.717147, nmi: 0.751181
+    Training ite 23599, c_loss_z: 0.004710, c_loss_x: -0.214716, e_loss: 0.033158, g_loss: -5.397779
+    Training ite 23600, acc: 0.742788, nmi: 0.740667
+    Training ite 23699, c_loss_z: -0.003735, c_loss_x: -0.423307, e_loss: -0.052326, g_loss: -5.570304
+    Training ite 23700, acc: 0.694611, nmi: 0.744959
+    Training ite 23799, c_loss_z: 0.002004, c_loss_x: -0.843140, e_loss: 0.001497, g_loss: -4.834721
+    Training ite 23800, acc: 0.826923, nmi: 0.799853
+    Training ite 23899, c_loss_z: 0.008716, c_loss_x: -0.826181, e_loss: 0.148576, g_loss: -1.117952
+    Training ite 23900, acc: 0.777444, nmi: 0.754692
+    Training ite 23999, c_loss_z: -0.004147, c_loss_x: -0.874453, e_loss: 0.104385, g_loss: -2.915088
+    Training ite 24000, acc: 0.678085, nmi: 0.713145
+    Training ite 24099, c_loss_z: 0.000301, c_loss_x: -0.339334, e_loss: 0.148714, g_loss: -3.254940
+    Training ite 24100, acc: 0.618890, nmi: 0.698989
+    Training ite 24199, c_loss_z: -0.001776, c_loss_x: 0.335883, e_loss: 0.061105, g_loss: -2.972099
+    Training ite 24200, acc: 0.689503, nmi: 0.740963
+    Training ite 24299, c_loss_z: -0.002797, c_loss_x: -0.551667, e_loss: 0.202009, g_loss: -3.721639
+    Training ite 24300, acc: 0.610677, nmi: 0.705587
+    Training ite 24399, c_loss_z: -0.001812, c_loss_x: -0.256895, e_loss: 0.107013, g_loss: -3.122798
+    Training ite 24400, acc: 0.783153, nmi: 0.764412
+    Training ite 24499, c_loss_z: 0.003954, c_loss_x: -1.102085, e_loss: 0.059465, g_loss: -3.190698
+    Training ite 24500, acc: 0.692107, nmi: 0.748331
+    Training ite 24599, c_loss_z: 0.000214, c_loss_x: -0.656424, e_loss: 0.245052, g_loss: -5.109173
+    Training ite 24600, acc: 0.677885, nmi: 0.717098
+    Training ite 24699, c_loss_z: -0.004214, c_loss_x: -0.449603, e_loss: 0.174190, g_loss: -9.137273
+    Training ite 24700, acc: 0.697416, nmi: 0.742534
+    Training ite 24799, c_loss_z: 0.001857, c_loss_x: -0.719032, e_loss: 0.166317, g_loss: -5.054891
+    Training ite 24800, acc: 0.704527, nmi: 0.747095
+    Training ite 24899, c_loss_z: -0.001688, c_loss_x: -0.833942, e_loss: 0.212104, g_loss: -7.638594
+    Training ite 24900, acc: 0.706931, nmi: 0.750127
+    Training ite 24999, c_loss_z: -0.002042, c_loss_x: -0.620761, e_loss: 0.091704, g_loss: -4.365864
+    Training ite 25000, acc: 0.675681, nmi: 0.700914
+    Training ite 25099, c_loss_z: 0.006186, c_loss_x: 0.206564, e_loss: 0.015233, g_loss: -4.940921
+    Training ite 25100, acc: 0.686198, nmi: 0.737821
+    Training ite 25199, c_loss_z: -0.007046, c_loss_x: -0.493971, e_loss: 0.040184, g_loss: -3.707980
+    Training ite 25200, acc: 0.701322, nmi: 0.747763
+    Training ite 25299, c_loss_z: 0.001956, c_loss_x: -0.222757, e_loss: 0.079920, g_loss: -2.432845
+    Training ite 25300, acc: 0.702724, nmi: 0.751001
+    Training ite 25399, c_loss_z: 0.000060, c_loss_x: -0.700178, e_loss: 0.095285, g_loss: -4.404880
+    Training ite 25400, acc: 0.629407, nmi: 0.705653
+    Training ite 25499, c_loss_z: -0.003361, c_loss_x: -0.869749, e_loss: 0.164698, g_loss: -6.196936
+    Training ite 25500, acc: 0.683994, nmi: 0.714704
+    Training ite 25599, c_loss_z: 0.004631, c_loss_x: -1.124791, e_loss: 0.184247, g_loss: -1.799968
+    Training ite 25600, acc: 0.802885, nmi: 0.779021
+    Training ite 25699, c_loss_z: -0.001939, c_loss_x: -1.028906, e_loss: 0.095275, g_loss: -6.401527
+    Training ite 25700, acc: 0.690405, nmi: 0.716945
+    Training ite 25799, c_loss_z: 0.000307, c_loss_x: -0.856762, e_loss: 0.222607, g_loss: -5.058239
+    Training ite 25800, acc: 0.817808, nmi: 0.786964
+    Training ite 25899, c_loss_z: 0.000388, c_loss_x: -0.757078, e_loss: 0.037028, g_loss: -5.352177
+    Training ite 25900, acc: 0.713241, nmi: 0.736677
+    Training ite 25999, c_loss_z: 0.006873, c_loss_x: -0.779461, e_loss: 0.084268, g_loss: -6.780432
+    Training ite 26000, acc: 0.757412, nmi: 0.730706
+    Training ite 26099, c_loss_z: 0.003577, c_loss_x: -0.338719, e_loss: -0.044968, g_loss: -6.934437
+    Training ite 26100, acc: 0.705228, nmi: 0.740503
+    Training ite 26199, c_loss_z: 0.000588, c_loss_x: -0.502890, e_loss: -0.019206, g_loss: -5.633259
+    Training ite 26200, acc: 0.765925, nmi: 0.737588
+    Training ite 26299, c_loss_z: 0.003898, c_loss_x: -0.797993, e_loss: -0.014798, g_loss: -5.112626
+    Training ite 26300, acc: 0.738381, nmi: 0.737387
+    Training ite 26399, c_loss_z: 0.000908, c_loss_x: 0.055559, e_loss: -0.083747, g_loss: -5.118704
+    Training ite 26400, acc: 0.761518, nmi: 0.745616
+    Training ite 26499, c_loss_z: 0.011207, c_loss_x: -0.381015, e_loss: 0.090176, g_loss: -4.174880
+    Training ite 26500, acc: 0.672175, nmi: 0.712085
+    Training ite 26599, c_loss_z: -0.002233, c_loss_x: -0.650273, e_loss: -0.170291, g_loss: -3.654993
+    Training ite 26600, acc: 0.673978, nmi: 0.717093
+    Training ite 26699, c_loss_z: 0.002463, c_loss_x: -1.032826, e_loss: -0.201417, g_loss: -5.043386
+    Training ite 26700, acc: 0.763121, nmi: 0.756508
+    Training ite 26799, c_loss_z: 0.005305, c_loss_x: -1.237441, e_loss: -0.025072, g_loss: -5.746925
+    Training ite 26800, acc: 0.699319, nmi: 0.749816
+    Training ite 26899, c_loss_z: -0.009240, c_loss_x: -0.378415, e_loss: -0.173425, g_loss: -5.747231
+    Training ite 26900, acc: 0.718850, nmi: 0.737709
+    Training ite 26999, c_loss_z: -0.000228, c_loss_x: -0.679731, e_loss: -0.170110, g_loss: -6.841495
+    Training ite 27000, acc: 0.812200, nmi: 0.792234
+    Training ite 27099, c_loss_z: 0.000988, c_loss_x: -0.636056, e_loss: -0.156986, g_loss: -3.257960
+    Training ite 27100, acc: 0.701022, nmi: 0.748075
+    Training ite 27199, c_loss_z: 0.001960, c_loss_x: -1.172839, e_loss: -0.124306, g_loss: -5.757190
+    Training ite 27200, acc: 0.790465, nmi: 0.762347
+    Training ite 27299, c_loss_z: 0.003845, c_loss_x: -0.511746, e_loss: -0.149588, g_loss: -5.825243
+    Training ite 27300, acc: 0.707232, nmi: 0.717395
+    Training ite 27399, c_loss_z: 0.001184, c_loss_x: -0.331186, e_loss: -0.246960, g_loss: -3.242472
+    Training ite 27400, acc: 0.782252, nmi: 0.779928
+    Training ite 27499, c_loss_z: 0.001462, c_loss_x: -0.320984, e_loss: -0.152736, g_loss: -5.177085
+    Training ite 27500, acc: 0.787059, nmi: 0.759085
+    Training ite 27599, c_loss_z: 0.006631, c_loss_x: -0.985108, e_loss: -0.187494, g_loss: -9.043606
+    Training ite 27600, acc: 0.717248, nmi: 0.764822
+    Training ite 27699, c_loss_z: -0.010809, c_loss_x: -0.825195, e_loss: -0.202786, g_loss: -6.533462
+    Training ite 27700, acc: 0.729267, nmi: 0.764752
+    Training ite 27799, c_loss_z: 0.000189, c_loss_x: -0.668357, e_loss: -0.224622, g_loss: -4.452986
+    Training ite 27800, acc: 0.693409, nmi: 0.725241
+    Training ite 27899, c_loss_z: 0.000164, c_loss_x: -0.785256, e_loss: -0.121422, g_loss: -4.284496
+    Training ite 27900, acc: 0.781350, nmi: 0.756667
+    Training ite 27999, c_loss_z: 0.006034, c_loss_x: -0.122415, e_loss: -0.051743, g_loss: -9.261611
+    Training ite 28000, acc: 0.756310, nmi: 0.746215
+    Training ite 28099, c_loss_z: -0.004215, c_loss_x: -0.482251, e_loss: -0.068053, g_loss: -6.400501
+    Training ite 28100, acc: 0.804788, nmi: 0.783566
+    Training ite 28199, c_loss_z: 0.002459, c_loss_x: -0.327067, e_loss: -0.140222, g_loss: -5.398606
+    Training ite 28200, acc: 0.731771, nmi: 0.763442
+    Training ite 28299, c_loss_z: -0.000537, c_loss_x: -0.220403, e_loss: -0.063835, g_loss: -6.156806
+    Training ite 28300, acc: 0.699720, nmi: 0.752419
+    Training ite 28399, c_loss_z: -0.000796, c_loss_x: -0.375467, e_loss: -0.092356, g_loss: -6.928345
+    Training ite 28400, acc: 0.682091, nmi: 0.717627
+    Training ite 28499, c_loss_z: 0.002643, c_loss_x: -0.191935, e_loss: 0.008605, g_loss: -6.820807
+    Training ite 28500, acc: 0.713742, nmi: 0.743999
+    Training ite 28599, c_loss_z: -0.001453, c_loss_x: -0.104938, e_loss: -0.174010, g_loss: -6.449207
+    Training ite 28600, acc: 0.815405, nmi: 0.793282
+    Training ite 28699, c_loss_z: 0.002902, c_loss_x: -0.631934, e_loss: -0.211806, g_loss: -5.917758
+    Training ite 28700, acc: 0.698718, nmi: 0.752146
+    Training ite 28799, c_loss_z: 0.009324, c_loss_x: -0.957285, e_loss: -0.283809, g_loss: -4.916571
+    Training ite 28800, acc: 0.772736, nmi: 0.749075
+    Training ite 28899, c_loss_z: -0.001701, c_loss_x: -0.734735, e_loss: -0.158836, g_loss: -4.084170
+    Training ite 28900, acc: 0.627704, nmi: 0.708690
+    Training ite 28999, c_loss_z: -0.001862, c_loss_x: -0.566954, e_loss: -0.007039, g_loss: -4.004930
+    Training ite 29000, acc: 0.802885, nmi: 0.791502
+    Training ite 29099, c_loss_z: 0.009528, c_loss_x: -0.267506, e_loss: -0.139950, g_loss: -5.606480
+    Training ite 29100, acc: 0.773337, nmi: 0.764806
+    Training ite 29199, c_loss_z: 0.006170, c_loss_x: -0.524794, e_loss: -0.046820, g_loss: -6.059930
+    Training ite 29200, acc: 0.811298, nmi: 0.784327
+    Training ite 29299, c_loss_z: -0.000070, c_loss_x: -0.623493, e_loss: -0.171295, g_loss: -4.046994
+    Training ite 29300, acc: 0.717748, nmi: 0.745706
+    Training ite 29399, c_loss_z: 0.003097, c_loss_x: -0.629522, e_loss: -0.233013, g_loss: -7.376650
+    Training ite 29400, acc: 0.727865, nmi: 0.764231
+    Training ite 29499, c_loss_z: -0.003003, c_loss_x: -0.977019, e_loss: -0.144613, g_loss: -6.893161
+    Training ite 29500, acc: 0.739183, nmi: 0.760562
+    Training ite 29599, c_loss_z: 0.009722, c_loss_x: -0.495459, e_loss: -0.182039, g_loss: -5.804210
+    Training ite 29600, acc: 0.808594, nmi: 0.780628
+    Training ite 29699, c_loss_z: -0.001292, c_loss_x: -0.562559, e_loss: -0.237480, g_loss: -8.443251
+    Training ite 29700, acc: 0.743590, nmi: 0.754185
+    Training ite 29799, c_loss_z: 0.002230, c_loss_x: 0.103105, e_loss: -0.117913, g_loss: -5.034293
+    Training ite 29800, acc: 0.770333, nmi: 0.764142
+    Training ite 29899, c_loss_z: 0.002543, c_loss_x: -0.184250, e_loss: -0.261855, g_loss: -6.667336
+    Training ite 29900, acc: 0.735677, nmi: 0.753034
+    Training ite 29999, c_loss_z: -0.002177, c_loss_x: -0.473713, e_loss: -0.146903, g_loss: -5.395381
+    Training ite 30000, acc: 0.761318, nmi: 0.756535
+    Training ite 30099, c_loss_z: 0.007176, c_loss_x: -0.238225, e_loss: -0.113291, g_loss: -5.964209
+    Training ite 30100, acc: 0.741787, nmi: 0.767962
+    Training ite 30199, c_loss_z: 0.004038, c_loss_x: -0.707510, e_loss: -0.157401, g_loss: -5.227073
+    Training ite 30200, acc: 0.682091, nmi: 0.724121
+    Training ite 30299, c_loss_z: 0.003382, c_loss_x: -1.131132, e_loss: -0.083862, g_loss: -8.292926
+    Training ite 30300, acc: 0.830028, nmi: 0.806825
+    Training ite 30399, c_loss_z: -0.000163, c_loss_x: -0.172143, e_loss: -0.139587, g_loss: -5.737412
+    Training ite 30400, acc: 0.773137, nmi: 0.779990
+    Training ite 30499, c_loss_z: 0.013044, c_loss_x: -1.121054, e_loss: -0.078147, g_loss: -5.052985
+    Training ite 30500, acc: 0.725260, nmi: 0.761387
+    Training ite 30599, c_loss_z: 0.004148, c_loss_x: -0.799379, e_loss: -0.228870, g_loss: -6.363334
+    Training ite 30600, acc: 0.789263, nmi: 0.803325
+    Training ite 30699, c_loss_z: 0.000574, c_loss_x: -0.417644, e_loss: -0.259361, g_loss: -6.379618
+    Training ite 30700, acc: 0.839844, nmi: 0.815805
+    Training ite 30799, c_loss_z: 0.000311, c_loss_x: -0.148083, e_loss: -0.159819, g_loss: -2.964407
+    Training ite 30800, acc: 0.705729, nmi: 0.759430
+    Training ite 30899, c_loss_z: 0.001734, c_loss_x: -0.477954, e_loss: -0.194602, g_loss: -6.026260
+    Training ite 30900, acc: 0.833133, nmi: 0.811195
+    Training ite 30999, c_loss_z: -0.002418, c_loss_x: -1.292809, e_loss: -0.309072, g_loss: -5.809215
+    Training ite 31000, acc: 0.825220, nmi: 0.801369
+    Training ite 31099, c_loss_z: 0.012724, c_loss_x: -0.282637, e_loss: -0.063858, g_loss: -5.925873
+    Training ite 31100, acc: 0.717748, nmi: 0.755199
+    Training ite 31199, c_loss_z: 0.005059, c_loss_x: -0.815799, e_loss: -0.156865, g_loss: -7.112483
+    Training ite 31200, acc: 0.713542, nmi: 0.758083
+    Training ite 31299, c_loss_z: 0.000142, c_loss_x: -0.550350, e_loss: -0.200637, g_loss: -6.706553
+    Training ite 31300, acc: 0.828125, nmi: 0.803703
+    Training ite 31399, c_loss_z: -0.003269, c_loss_x: 0.284751, e_loss: -0.028813, g_loss: -9.149183
+    Training ite 31400, acc: 0.781450, nmi: 0.777394
+    Training ite 31499, c_loss_z: -0.000269, c_loss_x: -1.541680, e_loss: -0.108285, g_loss: -3.682259
+    Training ite 31500, acc: 0.770333, nmi: 0.769107
+    Training ite 31599, c_loss_z: 0.002428, c_loss_x: -0.515563, e_loss: -0.077270, g_loss: -7.105141
+    Training ite 31600, acc: 0.831731, nmi: 0.801742
+    Training ite 31699, c_loss_z: 0.000710, c_loss_x: -0.668368, e_loss: -0.275310, g_loss: -8.051280
+    Training ite 31700, acc: 0.789062, nmi: 0.783132
+    Training ite 31799, c_loss_z: 0.004311, c_loss_x: -0.583683, e_loss: -0.091216, g_loss: -4.874167
+    Training ite 31800, acc: 0.738381, nmi: 0.760512
+    Training ite 31899, c_loss_z: 0.005644, c_loss_x: -0.712933, e_loss: -0.074135, g_loss: -9.935344
+    Training ite 31900, acc: 0.751703, nmi: 0.768539
+    Training ite 31999, c_loss_z: -0.001174, c_loss_x: -0.938380, e_loss: -0.279130, g_loss: -5.681067
+    Training ite 32000, acc: 0.716346, nmi: 0.770778
+    Training ite 32099, c_loss_z: 0.000841, c_loss_x: -0.221912, e_loss: -0.098635, g_loss: -3.579992
+    Training ite 32100, acc: 0.735276, nmi: 0.765664
+    Training ite 32199, c_loss_z: 0.000942, c_loss_x: -0.211585, e_loss: -0.252305, g_loss: -11.181506
+    Training ite 32200, acc: 0.715345, nmi: 0.755416
+    Training ite 32299, c_loss_z: -0.006389, c_loss_x: -1.463188, e_loss: -0.254725, g_loss: -6.532049
+    Training ite 32300, acc: 0.749599, nmi: 0.769625
+    Training ite 32399, c_loss_z: -0.000370, c_loss_x: -0.282148, e_loss: -0.198637, g_loss: -8.144177
+    Training ite 32400, acc: 0.838942, nmi: 0.817123
+    Training ite 32499, c_loss_z: 0.002344, c_loss_x: -0.225853, e_loss: -0.190661, g_loss: -4.859192
+    Training ite 32500, acc: 0.726562, nmi: 0.766666
+    Training ite 32599, c_loss_z: 0.004796, c_loss_x: -1.015553, e_loss: -0.336582, g_loss: -5.326632
+    Training ite 32600, acc: 0.783353, nmi: 0.805239
+    Training ite 32699, c_loss_z: 0.003738, c_loss_x: -0.210378, e_loss: -0.148089, g_loss: -6.526671
+    Training ite 32700, acc: 0.833133, nmi: 0.808789
+    Training ite 32799, c_loss_z: -0.001630, c_loss_x: -0.527427, e_loss: -0.177030, g_loss: -8.253042
+    Training ite 32800, acc: 0.805489, nmi: 0.819446
+    Training ite 32899, c_loss_z: 0.003549, c_loss_x: -0.464336, e_loss: -0.126570, g_loss: -7.207559
+    Training ite 32900, acc: 0.720152, nmi: 0.774702
+    Training ite 32999, c_loss_z: -0.002283, c_loss_x: -0.981858, e_loss: -0.160650, g_loss: -6.546300
+    Training ite 33000, acc: 0.849359, nmi: 0.823732
+    Training ite 33099, c_loss_z: -0.000406, c_loss_x: -0.633325, e_loss: -0.241285, g_loss: -7.809749
+    Training ite 33100, acc: 0.832031, nmi: 0.815571
+    Training ite 33199, c_loss_z: -0.003756, c_loss_x: -1.303511, e_loss: -0.269161, g_loss: -8.715747
+    Training ite 33200, acc: 0.773638, nmi: 0.769493
+    Training ite 33299, c_loss_z: -0.000844, c_loss_x: -0.161533, e_loss: -0.194782, g_loss: -5.197318
+    Training ite 33300, acc: 0.842548, nmi: 0.810531
+    Training ite 33399, c_loss_z: -0.008738, c_loss_x: -0.820252, e_loss: -0.247796, g_loss: -6.975268
+    Training ite 33400, acc: 0.715545, nmi: 0.762242
+    Training ite 33499, c_loss_z: 0.003333, c_loss_x: -0.278157, e_loss: -0.249501, g_loss: -9.048657
+    Training ite 33500, acc: 0.842448, nmi: 0.814947
+    Training ite 33599, c_loss_z: 0.002545, c_loss_x: -0.304853, e_loss: -0.420969, g_loss: -4.423048
+    Training ite 33600, acc: 0.834034, nmi: 0.807194
+    Training ite 33699, c_loss_z: 0.001245, c_loss_x: 0.030671, e_loss: -0.235721, g_loss: -8.665682
+    Training ite 33700, acc: 0.816206, nmi: 0.794724
+    Training ite 33799, c_loss_z: 0.004507, c_loss_x: -0.652705, e_loss: -0.376446, g_loss: -7.323984
+    Training ite 33800, acc: 0.794371, nmi: 0.803105
+    Training ite 33899, c_loss_z: 0.000247, c_loss_x: -0.445453, e_loss: -0.317094, g_loss: -6.996186
+    Training ite 33900, acc: 0.829026, nmi: 0.811977
+    Training ite 33999, c_loss_z: -0.001596, c_loss_x: -0.232218, e_loss: -0.218926, g_loss: -7.302660
+    Training ite 34000, acc: 0.728666, nmi: 0.778633
+    Training ite 34099, c_loss_z: -0.000514, c_loss_x: -0.505548, e_loss: -0.204736, g_loss: -6.654353
+    Training ite 34100, acc: 0.799780, nmi: 0.809127
+    Training ite 34199, c_loss_z: 0.003062, c_loss_x: -0.658085, e_loss: -0.181808, g_loss: -3.599944
+    Training ite 34200, acc: 0.725461, nmi: 0.767698
+    Training ite 34299, c_loss_z: -0.007435, c_loss_x: -1.181180, e_loss: -0.352602, g_loss: -5.132055
+    Training ite 34300, acc: 0.815004, nmi: 0.811660
+    Training ite 34399, c_loss_z: -0.004071, c_loss_x: -1.500592, e_loss: -0.215110, g_loss: -8.080224
+    Training ite 34400, acc: 0.803486, nmi: 0.804290
+    Training ite 34499, c_loss_z: -0.000747, c_loss_x: -0.265971, e_loss: -0.205402, g_loss: -7.343756
+    Training ite 34500, acc: 0.724559, nmi: 0.782010
+    Training ite 34599, c_loss_z: 0.003603, c_loss_x: 0.011760, e_loss: -0.198315, g_loss: -9.607298
+    Training ite 34600, acc: 0.808694, nmi: 0.815186
+    Training ite 34699, c_loss_z: -0.003224, c_loss_x: -0.456270, e_loss: -0.176825, g_loss: -8.479745
+    Training ite 34700, acc: 0.800581, nmi: 0.809408
+    Training ite 34799, c_loss_z: 0.006306, c_loss_x: -0.758314, e_loss: -0.313089, g_loss: -5.525687
+    Training ite 34800, acc: 0.727965, nmi: 0.772966
+    Training ite 34899, c_loss_z: 0.000980, c_loss_x: -0.928783, e_loss: -0.270083, g_loss: -6.635138
+    Training ite 34900, acc: 0.793970, nmi: 0.812597
+    Training ite 34999, c_loss_z: -0.003457, c_loss_x: -0.709421, e_loss: -0.440955, g_loss: -8.160042
+    Training ite 35000, acc: 0.811498, nmi: 0.811710
+    Training ite 35099, c_loss_z: -0.003501, c_loss_x: -1.161142, e_loss: -0.224292, g_loss: -10.062803
+    Training ite 35100, acc: 0.827424, nmi: 0.811950
+    Training ite 35199, c_loss_z: 0.003657, c_loss_x: -0.735378, e_loss: -0.238504, g_loss: -7.282600
+    Training ite 35200, acc: 0.795773, nmi: 0.810573
+    Training ite 35299, c_loss_z: 0.001857, c_loss_x: -0.686187, e_loss: -0.406649, g_loss: -7.683729
+    Training ite 35300, acc: 0.712139, nmi: 0.758119
+    Training ite 35399, c_loss_z: -0.000674, c_loss_x: -0.473422, e_loss: -0.332178, g_loss: -8.844637
+    Training ite 35400, acc: 0.797376, nmi: 0.815961
+    Training ite 35499, c_loss_z: -0.000205, c_loss_x: -0.370726, e_loss: -0.332934, g_loss: -7.960811
+    Training ite 35500, acc: 0.715545, nmi: 0.758250
+    Training ite 35599, c_loss_z: -0.003199, c_loss_x: -0.188145, e_loss: -0.243167, g_loss: -7.968863
+    Training ite 35600, acc: 0.793870, nmi: 0.809893
+    Training ite 35699, c_loss_z: 0.001039, c_loss_x: -0.354722, e_loss: -0.303897, g_loss: -8.968848
+    Training ite 35700, acc: 0.726863, nmi: 0.766457
+    Training ite 35799, c_loss_z: -0.001995, c_loss_x: -0.356053, e_loss: -0.302911, g_loss: -8.932819
+    Training ite 35800, acc: 0.719451, nmi: 0.760046
+    Training ite 35899, c_loss_z: 0.000783, c_loss_x: 0.248873, e_loss: -0.411934, g_loss: -9.248684
+    Training ite 35900, acc: 0.709936, nmi: 0.746895
+    Training ite 35999, c_loss_z: 0.002115, c_loss_x: 0.091022, e_loss: -0.333077, g_loss: -9.570555
+    Training ite 36000, acc: 0.785657, nmi: 0.788799
+    Training ite 36099, c_loss_z: -0.001271, c_loss_x: -0.221523, e_loss: -0.411022, g_loss: -10.850676
+    Training ite 36100, acc: 0.831831, nmi: 0.805657
+    Training ite 36199, c_loss_z: 0.001026, c_loss_x: -1.263001, e_loss: -0.505792, g_loss: -9.260372
+    Training ite 36200, acc: 0.835837, nmi: 0.809758
+    Training ite 36299, c_loss_z: 0.003459, c_loss_x: -0.455249, e_loss: -0.418115, g_loss: -8.329959
+    Training ite 36300, acc: 0.831631, nmi: 0.799838
+    Training ite 36399, c_loss_z: 0.001145, c_loss_x: -0.727923, e_loss: -0.250566, g_loss: -9.764123
+    Training ite 36400, acc: 0.705228, nmi: 0.758346
+    Training ite 36499, c_loss_z: -0.003273, c_loss_x: -0.365889, e_loss: -0.417228, g_loss: -6.065124
+    Training ite 36500, acc: 0.819211, nmi: 0.801593
+    Training ite 36599, c_loss_z: -0.003533, c_loss_x: -0.311135, e_loss: -0.149531, g_loss: -3.053850
+    Training ite 36600, acc: 0.789163, nmi: 0.802923
+    Training ite 36699, c_loss_z: -0.002464, c_loss_x: -0.829439, e_loss: -0.447431, g_loss: -8.457058
+    Training ite 36700, acc: 0.833433, nmi: 0.816077
+    Training ite 36799, c_loss_z: 0.000056, c_loss_x: -0.524392, e_loss: -0.374624, g_loss: -7.452781
+    Training ite 36800, acc: 0.731871, nmi: 0.774250
+    Training ite 36899, c_loss_z: 0.003002, c_loss_x: 0.284989, e_loss: -0.365671, g_loss: -4.667715
+    Training ite 36900, acc: 0.707933, nmi: 0.756441
+    Training ite 36999, c_loss_z: -0.003785, c_loss_x: -0.385725, e_loss: -0.417716, g_loss: -7.773689
+    Training ite 37000, acc: 0.826022, nmi: 0.805774
+    Training ite 37099, c_loss_z: 0.000561, c_loss_x: -0.258847, e_loss: -0.489523, g_loss: -6.914044
+    Training ite 37100, acc: 0.798578, nmi: 0.785557
+    Training ite 37199, c_loss_z: 0.000078, c_loss_x: -0.263741, e_loss: -0.237010, g_loss: -5.291075
+    Training ite 37200, acc: 0.724860, nmi: 0.767214
+    Training ite 37299, c_loss_z: -0.004437, c_loss_x: 0.191849, e_loss: -0.364375, g_loss: -8.359653
+    Training ite 37300, acc: 0.731971, nmi: 0.766328
+    Training ite 37399, c_loss_z: 0.001800, c_loss_x: -0.450888, e_loss: -0.336505, g_loss: -5.525581
+    Training ite 37400, acc: 0.787560, nmi: 0.800715
+    Training ite 37499, c_loss_z: 0.001778, c_loss_x: -0.680962, e_loss: -0.388428, g_loss: -6.179880
+    Training ite 37500, acc: 0.761418, nmi: 0.775404
+    Training ite 37599, c_loss_z: -0.001991, c_loss_x: -0.627922, e_loss: -0.439431, g_loss: -6.081608
+    Training ite 37600, acc: 0.847957, nmi: 0.823576
+    Training ite 37699, c_loss_z: 0.004342, c_loss_x: -0.535914, e_loss: -0.528029, g_loss: -5.447709
+    Training ite 37700, acc: 0.715545, nmi: 0.761711
+    Training ite 37799, c_loss_z: 0.007042, c_loss_x: -0.712963, e_loss: -0.304278, g_loss: -6.904027
+    Training ite 37800, acc: 0.838942, nmi: 0.818829
+    Training ite 37899, c_loss_z: 0.001170, c_loss_x: -0.220582, e_loss: -0.352662, g_loss: -4.153650
+    Training ite 37900, acc: 0.846955, nmi: 0.829442
+    Training ite 37999, c_loss_z: -0.008136, c_loss_x: -0.853965, e_loss: -0.285525, g_loss: -6.973520
+    Training ite 38000, acc: 0.691206, nmi: 0.767142
+    Training ite 38099, c_loss_z: -0.004763, c_loss_x: -0.067372, e_loss: -0.407960, g_loss: -9.320927
+    Training ite 38100, acc: 0.704026, nmi: 0.771349
+    Training ite 38199, c_loss_z: 0.000111, c_loss_x: -0.022174, e_loss: -0.385061, g_loss: -5.963504
+    Training ite 38200, acc: 0.784155, nmi: 0.804988
+    Training ite 38299, c_loss_z: -0.000339, c_loss_x: -0.332578, e_loss: -0.411398, g_loss: -5.414653
+    Training ite 38300, acc: 0.721655, nmi: 0.771953
+    Training ite 38399, c_loss_z: -0.000446, c_loss_x: -1.155412, e_loss: -0.494242, g_loss: -9.648768
+    Training ite 38400, acc: 0.789864, nmi: 0.801444
+    Training ite 38499, c_loss_z: 0.002726, c_loss_x: -0.472353, e_loss: -0.482558, g_loss: -5.237551
+    Training ite 38500, acc: 0.720052, nmi: 0.764596
+    Training ite 38599, c_loss_z: 0.005933, c_loss_x: -0.797395, e_loss: -0.290685, g_loss: -7.447721
+    Training ite 38600, acc: 0.790966, nmi: 0.809740
+    Training ite 38699, c_loss_z: 0.003110, c_loss_x: -0.135805, e_loss: -0.459116, g_loss: -6.093456
+    Training ite 38700, acc: 0.840845, nmi: 0.816301
+    Training ite 38799, c_loss_z: 0.004830, c_loss_x: -1.058647, e_loss: -0.368443, g_loss: -7.655290
+    Training ite 38800, acc: 0.786959, nmi: 0.794524
+    Training ite 38899, c_loss_z: -0.002271, c_loss_x: -0.738926, e_loss: -0.232254, g_loss: -7.935555
+    Training ite 38900, acc: 0.782252, nmi: 0.809599
+    Training ite 38999, c_loss_z: 0.003910, c_loss_x: -0.185282, e_loss: -0.425459, g_loss: -9.005971
+    Training ite 39000, acc: 0.797175, nmi: 0.818061
+    Training ite 39099, c_loss_z: 0.002439, c_loss_x: -0.788316, e_loss: -0.275440, g_loss: -5.782958
+    Training ite 39100, acc: 0.790064, nmi: 0.806492
+    Training ite 39199, c_loss_z: 0.001874, c_loss_x: -0.277865, e_loss: -0.373537, g_loss: -6.735747
+    Training ite 39200, acc: 0.827524, nmi: 0.808942
+    Training ite 39299, c_loss_z: 0.006831, c_loss_x: -0.139253, e_loss: -0.375176, g_loss: -3.684757
+    Training ite 39300, acc: 0.820212, nmi: 0.806187
+    Training ite 39399, c_loss_z: 0.004067, c_loss_x: -0.390216, e_loss: -0.381781, g_loss: -4.897596
+    Training ite 39400, acc: 0.782853, nmi: 0.809729
+    Training ite 39499, c_loss_z: 0.003149, c_loss_x: -0.607826, e_loss: -0.293156, g_loss: -4.312088
+    Training ite 39500, acc: 0.785657, nmi: 0.803597
+    Training ite 39599, c_loss_z: -0.004046, c_loss_x: -0.382942, e_loss: -0.348119, g_loss: -6.357211
+    Training ite 39600, acc: 0.828526, nmi: 0.811689
+    Training ite 39699, c_loss_z: -0.002628, c_loss_x: -0.969160, e_loss: -0.238130, g_loss: -4.066957
+    Training ite 39700, acc: 0.710236, nmi: 0.765071
+    Training ite 39799, c_loss_z: 0.003591, c_loss_x: -0.606916, e_loss: -0.350789, g_loss: -7.911510
+    Training ite 39800, acc: 0.711438, nmi: 0.796031
+    Training ite 39899, c_loss_z: 0.004914, c_loss_x: -0.416371, e_loss: -0.257280, g_loss: -6.129315
+    Training ite 39900, acc: 0.790966, nmi: 0.816525
+    Training ite 39999, c_loss_z: 0.000134, c_loss_x: -0.478218, e_loss: -0.234074, g_loss: -8.161337
+    Training ite 40000, acc: 0.776342, nmi: 0.795375
+    Training ite 40099, c_loss_z: -0.004922, c_loss_x: -0.119181, e_loss: -0.131119, g_loss: -4.850668
+    Training ite 40100, acc: 0.735377, nmi: 0.776149
+    Training ite 40199, c_loss_z: 0.004396, c_loss_x: -0.092979, e_loss: -0.345177, g_loss: -7.553418
+    Training ite 40200, acc: 0.798077, nmi: 0.815374
+    Training ite 40299, c_loss_z: 0.001691, c_loss_x: -0.632681, e_loss: -0.268936, g_loss: -5.307339
+    Training ite 40300, acc: 0.796174, nmi: 0.806018
+    Training ite 40399, c_loss_z: 0.001912, c_loss_x: -0.363971, e_loss: -0.216879, g_loss: -6.720372
+    Training ite 40400, acc: 0.708734, nmi: 0.760670
+    Training ite 40499, c_loss_z: 0.000496, c_loss_x: -0.582237, e_loss: -0.290797, g_loss: -7.590483
+    Training ite 40500, acc: 0.780349, nmi: 0.800102
+    Training ite 40599, c_loss_z: -0.002051, c_loss_x: -0.407766, e_loss: -0.289254, g_loss: -7.457037
+    Training ite 40600, acc: 0.789563, nmi: 0.793376
+    Training ite 40699, c_loss_z: -0.005216, c_loss_x: -0.893358, e_loss: -0.138202, g_loss: -4.017433
+    Training ite 40700, acc: 0.722055, nmi: 0.770565
+    Training ite 40799, c_loss_z: 0.000542, c_loss_x: -0.431085, e_loss: -0.197355, g_loss: -5.526648
+    Training ite 40800, acc: 0.790865, nmi: 0.804780
+    Training ite 40899, c_loss_z: -0.004754, c_loss_x: 0.109325, e_loss: -0.287129, g_loss: -10.107427
+    Training ite 40900, acc: 0.792568, nmi: 0.807419
+    Training ite 40999, c_loss_z: -0.003173, c_loss_x: -0.516562, e_loss: -0.297987, g_loss: -4.090914
+    Training ite 41000, acc: 0.804788, nmi: 0.826584
+    Training ite 41099, c_loss_z: -0.003515, c_loss_x: 0.197384, e_loss: -0.427411, g_loss: -8.324316
+    Training ite 41100, acc: 0.799980, nmi: 0.821867
+    Training ite 41199, c_loss_z: -0.003918, c_loss_x: -0.025692, e_loss: -0.349935, g_loss: -6.695206
+    Training ite 41200, acc: 0.790966, nmi: 0.802655
+    Training ite 41299, c_loss_z: -0.003523, c_loss_x: 0.112039, e_loss: -0.149505, g_loss: -8.293279
+    Training ite 41300, acc: 0.836138, nmi: 0.812708
+    Training ite 41399, c_loss_z: -0.001345, c_loss_x: -0.571267, e_loss: -0.264021, g_loss: -9.900975
+    Training ite 41400, acc: 0.792067, nmi: 0.807626
+    Training ite 41499, c_loss_z: 0.007606, c_loss_x: -0.414745, e_loss: -0.253072, g_loss: -8.348615
+    Training ite 41500, acc: 0.800180, nmi: 0.800755
+    Training ite 41599, c_loss_z: -0.000258, c_loss_x: 0.275108, e_loss: -0.224912, g_loss: -4.074596
+    Training ite 41600, acc: 0.686498, nmi: 0.759995
+    Training ite 41699, c_loss_z: 0.006675, c_loss_x: -0.551822, e_loss: -0.150034, g_loss: -6.588415
+    Training ite 41700, acc: 0.823317, nmi: 0.814767
+    Training ite 41799, c_loss_z: -0.000633, c_loss_x: -0.801858, e_loss: -0.361673, g_loss: -6.993699
+    Training ite 41800, acc: 0.790665, nmi: 0.801653
+    Training ite 41899, c_loss_z: -0.003206, c_loss_x: 0.661035, e_loss: -0.332208, g_loss: -1.334682
+    Training ite 41900, acc: 0.809195, nmi: 0.820112
+    Training ite 41999, c_loss_z: -0.002981, c_loss_x: -0.379966, e_loss: -0.250231, g_loss: -9.296850
+    Training ite 42000, acc: 0.779547, nmi: 0.786848
+    Training ite 42099, c_loss_z: -0.005973, c_loss_x: -0.522365, e_loss: -0.354155, g_loss: -6.721536
+    Training ite 42100, acc: 0.782652, nmi: 0.784654
+    Training ite 42199, c_loss_z: -0.001950, c_loss_x: -0.673087, e_loss: -0.109291, g_loss: -4.364849
+    Training ite 42200, acc: 0.766526, nmi: 0.783952
+    Training ite 42299, c_loss_z: -0.004950, c_loss_x: -0.476214, e_loss: -0.365258, g_loss: -5.945825
+    Training ite 42300, acc: 0.797376, nmi: 0.806384
+    Training ite 42399, c_loss_z: -0.001158, c_loss_x: -0.767343, e_loss: -0.438535, g_loss: -9.652408
+    Training ite 42400, acc: 0.818610, nmi: 0.811032
+    Training ite 42499, c_loss_z: 0.000400, c_loss_x: 0.135218, e_loss: -0.287574, g_loss: -8.720960
+    Training ite 42500, acc: 0.791166, nmi: 0.796671
+    Training ite 42599, c_loss_z: -0.000532, c_loss_x: -0.200772, e_loss: -0.088020, g_loss: -8.671689
+    Training ite 42600, acc: 0.786158, nmi: 0.792366
+    Training ite 42699, c_loss_z: 0.002313, c_loss_x: -1.515399, e_loss: -0.069027, g_loss: -8.964611
+    Training ite 42700, acc: 0.695112, nmi: 0.756128
+    Training ite 42799, c_loss_z: 0.005024, c_loss_x: -0.015357, e_loss: -0.085697, g_loss: -4.377214
+    Training ite 42800, acc: 0.708133, nmi: 0.755794
+    Training ite 42899, c_loss_z: -0.002936, c_loss_x: -0.378548, e_loss: -0.031279, g_loss: -1.646029
+    Training ite 42900, acc: 0.695212, nmi: 0.760027
+    Training ite 42999, c_loss_z: -0.000909, c_loss_x: -0.240651, e_loss: -0.156733, g_loss: -4.517463
+    Training ite 43000, acc: 0.783353, nmi: 0.801771
+    Training ite 43099, c_loss_z: 0.005421, c_loss_x: -0.536467, e_loss: -0.279689, g_loss: -6.644230
+    Training ite 43100, acc: 0.787460, nmi: 0.807281
+    Training ite 43199, c_loss_z: 0.000424, c_loss_x: -0.248248, e_loss: -0.092751, g_loss: -8.507402
+    Training ite 43200, acc: 0.851562, nmi: 0.823777
+    Training ite 43299, c_loss_z: -0.003115, c_loss_x: -0.391874, e_loss: -0.001774, g_loss: -5.707965
+    Training ite 43300, acc: 0.790465, nmi: 0.802433
+    Training ite 43399, c_loss_z: 0.001113, c_loss_x: -0.172981, e_loss: -0.062403, g_loss: -8.119615
+    Training ite 43400, acc: 0.694912, nmi: 0.778420
+    Training ite 43499, c_loss_z: -0.000971, c_loss_x: -0.246990, e_loss: 0.045794, g_loss: -6.093916
+    Training ite 43500, acc: 0.800080, nmi: 0.811420
+    Training ite 43599, c_loss_z: -0.002619, c_loss_x: -0.407899, e_loss: -0.067652, g_loss: -4.511591
+    Training ite 43600, acc: 0.767829, nmi: 0.782851
+    Training ite 43699, c_loss_z: -0.003666, c_loss_x: -0.450474, e_loss: -0.157678, g_loss: -7.598123
+    Training ite 43700, acc: 0.790365, nmi: 0.805876
+    Training ite 43799, c_loss_z: 0.007637, c_loss_x: -0.729999, e_loss: -0.133691, g_loss: -5.007330
+    Training ite 43800, acc: 0.790064, nmi: 0.811483
+    Training ite 43899, c_loss_z: -0.006582, c_loss_x: -0.600915, e_loss: -0.052897, g_loss: -8.691493
+    Training ite 43900, acc: 0.785757, nmi: 0.805846
+    Training ite 43999, c_loss_z: -0.003545, c_loss_x: 0.019025, e_loss: -0.214432, g_loss: -11.143460
+    Training ite 44000, acc: 0.796374, nmi: 0.814635
+    Training ite 44099, c_loss_z: -0.006591, c_loss_x: -0.428322, e_loss: -0.232312, g_loss: -9.803861
+    Training ite 44100, acc: 0.830128, nmi: 0.813826
+    Training ite 44199, c_loss_z: -0.002174, c_loss_x: -0.461866, e_loss: -0.191810, g_loss: -8.684551
+    Training ite 44200, acc: 0.782151, nmi: 0.801315
+    Training ite 44299, c_loss_z: 0.000480, c_loss_x: -0.542149, e_loss: -0.139292, g_loss: -7.691383
+    Training ite 44300, acc: 0.684796, nmi: 0.757144
+    Training ite 44399, c_loss_z: -0.002352, c_loss_x: -0.353965, e_loss: 0.008620, g_loss: -7.557810
+    Training ite 44400, acc: 0.785657, nmi: 0.803887
+    Training ite 44499, c_loss_z: 0.003516, c_loss_x: -0.127539, e_loss: -0.074955, g_loss: -11.108579
+    Training ite 44500, acc: 0.713041, nmi: 0.773893
+    Training ite 44599, c_loss_z: -0.000454, c_loss_x: -0.620637, e_loss: -0.288268, g_loss: -7.523911
+    Training ite 44600, acc: 0.785557, nmi: 0.797185
+    Training ite 44699, c_loss_z: -0.003875, c_loss_x: -0.494508, e_loss: -0.129841, g_loss: -8.042074
+    Training ite 44700, acc: 0.796975, nmi: 0.816048
+    Training ite 44799, c_loss_z: 0.005352, c_loss_x: -0.005423, e_loss: -0.208329, g_loss: -10.989010
+    Training ite 44800, acc: 0.796274, nmi: 0.816430
+    Training ite 44899, c_loss_z: 0.001977, c_loss_x: -0.417255, e_loss: -0.127588, g_loss: -6.865987
+    Training ite 44900, acc: 0.779748, nmi: 0.797945
+    Training ite 44999, c_loss_z: -0.003532, c_loss_x: -0.815402, e_loss: -0.241878, g_loss: -5.973963
+    Training ite 45000, acc: 0.794071, nmi: 0.806902
+    Training ite 45099, c_loss_z: 0.000108, c_loss_x: -0.735035, e_loss: -0.248295, g_loss: -7.724698
+    Training ite 45100, acc: 0.789263, nmi: 0.801335
+    Training ite 45199, c_loss_z: -0.003672, c_loss_x: -0.259013, e_loss: -0.228261, g_loss: -7.053719
+    Training ite 45200, acc: 0.783654, nmi: 0.802513
+    Training ite 45299, c_loss_z: 0.003157, c_loss_x: -0.625671, e_loss: -0.247815, g_loss: -8.532393
+    Training ite 45300, acc: 0.793570, nmi: 0.806136
+    Training ite 45399, c_loss_z: 0.004618, c_loss_x: -0.156559, e_loss: -0.241216, g_loss: -6.578024
+    Training ite 45400, acc: 0.829627, nmi: 0.812763
+    Training ite 45499, c_loss_z: -0.003127, c_loss_x: 0.696281, e_loss: -0.247936, g_loss: -9.357715
+    Training ite 45500, acc: 0.782853, nmi: 0.824388
+    Training ite 45599, c_loss_z: -0.002380, c_loss_x: -0.496510, e_loss: -0.206210, g_loss: -5.645651
+    Training ite 45600, acc: 0.827023, nmi: 0.813391
+    Training ite 45699, c_loss_z: -0.000538, c_loss_x: -0.078015, e_loss: -0.274097, g_loss: -4.958777
+    Training ite 45700, acc: 0.816907, nmi: 0.795814
+    Training ite 45799, c_loss_z: -0.003181, c_loss_x: -0.175697, e_loss: -0.116427, g_loss: -9.880402
+    Training ite 45800, acc: 0.701422, nmi: 0.762980
+    Training ite 45899, c_loss_z: 0.001120, c_loss_x: -0.397351, e_loss: -0.217439, g_loss: -5.082042
+    Training ite 45900, acc: 0.789563, nmi: 0.811244
+    Training ite 45999, c_loss_z: -0.001207, c_loss_x: -0.109807, e_loss: -0.108725, g_loss: -8.166451
+    Training ite 46000, acc: 0.703425, nmi: 0.766227
+    Training ite 46099, c_loss_z: -0.002935, c_loss_x: -0.198844, e_loss: -0.351774, g_loss: -6.664181
+    Training ite 46100, acc: 0.786458, nmi: 0.814670
+    Training ite 46199, c_loss_z: 0.004592, c_loss_x: -0.198969, e_loss: -0.242890, g_loss: -6.925753
+    Training ite 46200, acc: 0.794772, nmi: 0.813284
+    Training ite 46299, c_loss_z: 0.002795, c_loss_x: -0.585825, e_loss: -0.117271, g_loss: -6.654093
+    Training ite 46300, acc: 0.851462, nmi: 0.835968
+    Training ite 46399, c_loss_z: -0.001914, c_loss_x: -0.612264, e_loss: -0.384199, g_loss: -7.464094
+    Training ite 46400, acc: 0.750801, nmi: 0.779278
+    Training ite 46499, c_loss_z: -0.000794, c_loss_x: -1.042653, e_loss: -0.224536, g_loss: -5.063828
+    Training ite 46500, acc: 0.825421, nmi: 0.813321
+    Training ite 46599, c_loss_z: 0.001955, c_loss_x: -0.851276, e_loss: -0.369491, g_loss: -4.428131
+    Training ite 46600, acc: 0.698818, nmi: 0.749207
+    Training ite 46699, c_loss_z: 0.000520, c_loss_x: -0.208108, e_loss: -0.244494, g_loss: -8.514305
+    Training ite 46700, acc: 0.822616, nmi: 0.808563
+    Training ite 46799, c_loss_z: -0.003607, c_loss_x: -0.533730, e_loss: -0.342878, g_loss: -4.975469
+    Training ite 46800, acc: 0.796875, nmi: 0.811133
+    Training ite 46899, c_loss_z: 0.003294, c_loss_x: -0.571562, e_loss: -0.221430, g_loss: -6.600470
+    Training ite 46900, acc: 0.708433, nmi: 0.752885
+    Training ite 46999, c_loss_z: -0.002295, c_loss_x: -0.197678, e_loss: -0.236935, g_loss: -9.084909
+    Training ite 47000, acc: 0.831530, nmi: 0.819485
+    Training ite 47099, c_loss_z: -0.001888, c_loss_x: -0.588447, e_loss: -0.070470, g_loss: -7.791369
+    Training ite 47100, acc: 0.704327, nmi: 0.787495
+    Training ite 47199, c_loss_z: -0.003044, c_loss_x: -0.613883, e_loss: -0.347088, g_loss: -8.005766
+    Training ite 47200, acc: 0.713642, nmi: 0.764932
+    Training ite 47299, c_loss_z: -0.009470, c_loss_x: -0.613539, e_loss: -0.430853, g_loss: -9.581487
+    Training ite 47300, acc: 0.802584, nmi: 0.832278
+    Training ite 47399, c_loss_z: -0.003347, c_loss_x: -0.574282, e_loss: -0.230690, g_loss: -7.685718
+    Training ite 47400, acc: 0.806190, nmi: 0.827197
+    Training ite 47499, c_loss_z: 0.001256, c_loss_x: -0.270848, e_loss: -0.244147, g_loss: -10.112299
+    Training ite 47500, acc: 0.804587, nmi: 0.826615
+    Training ite 47599, c_loss_z: -0.005358, c_loss_x: -0.589380, e_loss: -0.353255, g_loss: -2.876394
+    Training ite 47600, acc: 0.826022, nmi: 0.821126
+    Training ite 47699, c_loss_z: 0.002184, c_loss_x: -0.672048, e_loss: -0.291630, g_loss: -3.775012
+    Training ite 47700, acc: 0.758614, nmi: 0.773777
+    Training ite 47799, c_loss_z: 0.001130, c_loss_x: -0.245438, e_loss: -0.167392, g_loss: -10.335484
+    Training ite 47800, acc: 0.832933, nmi: 0.817679
+    Training ite 47899, c_loss_z: 0.006847, c_loss_x: -0.572728, e_loss: -0.172438, g_loss: -10.051136
+    Training ite 47900, acc: 0.703225, nmi: 0.765214
+    Training ite 47999, c_loss_z: -0.004791, c_loss_x: -0.018606, e_loss: -0.236110, g_loss: -7.129302
+    Training ite 48000, acc: 0.704227, nmi: 0.767690
+    Training ite 48099, c_loss_z: 0.005447, c_loss_x: -0.357004, e_loss: -0.448721, g_loss: -5.622795
+    Training ite 48100, acc: 0.814503, nmi: 0.826772
+    Training ite 48199, c_loss_z: 0.000537, c_loss_x: 0.104162, e_loss: -0.380692, g_loss: -8.191866
+    Training ite 48200, acc: 0.782252, nmi: 0.806194
+    Training ite 48299, c_loss_z: 0.003481, c_loss_x: -1.114512, e_loss: -0.165143, g_loss: -10.241179
+    Training ite 48300, acc: 0.794872, nmi: 0.818048
+    Training ite 48399, c_loss_z: -0.003960, c_loss_x: 0.057506, e_loss: -0.370035, g_loss: -4.048010
+    Training ite 48400, acc: 0.713442, nmi: 0.759782
+    Training ite 48499, c_loss_z: -0.001836, c_loss_x: -0.114722, e_loss: -0.269461, g_loss: -8.023230
+    Training ite 48500, acc: 0.803486, nmi: 0.803114
+    Training ite 48599, c_loss_z: -0.003370, c_loss_x: -0.296049, e_loss: -0.220479, g_loss: -6.467081
+    Training ite 48600, acc: 0.713642, nmi: 0.757078
+    Training ite 48699, c_loss_z: -0.003156, c_loss_x: -0.364632, e_loss: -0.424031, g_loss: -7.091907
+    Training ite 48700, acc: 0.843950, nmi: 0.831025
+    Training ite 48799, c_loss_z: 0.000653, c_loss_x: -0.732794, e_loss: -0.249785, g_loss: -7.273281
+    Training ite 48800, acc: 0.839143, nmi: 0.821765
+    Training ite 48899, c_loss_z: 0.000466, c_loss_x: -0.621062, e_loss: -0.405835, g_loss: -8.544434
+    Training ite 48900, acc: 0.934295, nmi: 0.877641
+    Training ite 48999, c_loss_z: -0.000050, c_loss_x: -0.305225, e_loss: -0.423879, g_loss: -4.918909
+    Training ite 49000, acc: 0.713442, nmi: 0.769019
+    Training ite 49099, c_loss_z: 0.001089, c_loss_x: -1.339833, e_loss: -0.195189, g_loss: -8.978927
+    Training ite 49100, acc: 0.835837, nmi: 0.826357
+    Training ite 49199, c_loss_z: -0.000422, c_loss_x: -1.437701, e_loss: -0.382916, g_loss: -11.875465
+    Training ite 49200, acc: 0.841246, nmi: 0.837377
+    Training ite 49299, c_loss_z: -0.000365, c_loss_x: -0.614576, e_loss: -0.534700, g_loss: -7.477064
+    Training ite 49300, acc: 0.806090, nmi: 0.820653
+    Training ite 49399, c_loss_z: 0.001960, c_loss_x: -1.094965, e_loss: -0.346189, g_loss: -7.998070
+    Training ite 49400, acc: 0.818910, nmi: 0.801487
+    Training ite 49499, c_loss_z: 0.005331, c_loss_x: -0.816841, e_loss: -0.267667, g_loss: -8.244210
+    Training ite 49500, acc: 0.802183, nmi: 0.814047
+    Training ite 49599, c_loss_z: 0.002115, c_loss_x: -0.597693, e_loss: -0.316218, g_loss: -9.202758
+    Training ite 49600, acc: 0.837740, nmi: 0.827247
+    Training ite 49699, c_loss_z: -0.000740, c_loss_x: -0.551815, e_loss: -0.397574, g_loss: -7.339045
+    Training ite 49700, acc: 0.820913, nmi: 0.808093
+    Training ite 49799, c_loss_z: 0.002955, c_loss_x: -0.575704, e_loss: -0.430033, g_loss: -8.870784
+    Training ite 49800, acc: 0.816306, nmi: 0.824974
+    Training ite 49899, c_loss_z: -0.002177, c_loss_x: -0.675212, e_loss: -0.144802, g_loss: -6.834150
+    Training ite 49900, acc: 0.797977, nmi: 0.812899
+    Training ite 49999, c_loss_z: 0.003010, c_loss_x: -0.390339, e_loss: -0.400251, g_loss: -8.764935
+    Training ite 50000, acc: 0.803185, nmi: 0.823604
+    Training ite 50099, c_loss_z: 0.001486, c_loss_x: -0.605900, e_loss: -0.351258, g_loss: -7.734912
+    Training ite 50100, acc: 0.784155, nmi: 0.814335
+    Training ite 50199, c_loss_z: 0.006662, c_loss_x: -0.369328, e_loss: -0.227446, g_loss: -6.324970
+    Training ite 50200, acc: 0.793770, nmi: 0.830680
+    Training ite 50299, c_loss_z: 0.000346, c_loss_x: -0.146560, e_loss: -0.533697, g_loss: -4.990143
+    Training ite 50300, acc: 0.828225, nmi: 0.817959
+    Training ite 50399, c_loss_z: 0.002493, c_loss_x: -0.418986, e_loss: -0.231647, g_loss: -8.216990
+    Training ite 50400, acc: 0.704427, nmi: 0.779212
+    Training ite 50499, c_loss_z: 0.000995, c_loss_x: -0.560974, e_loss: -0.359010, g_loss: -8.164210
+    Training ite 50500, acc: 0.833934, nmi: 0.818344
+    Training ite 50599, c_loss_z: -0.004875, c_loss_x: -0.945128, e_loss: -0.433802, g_loss: -6.697633
+    Training ite 50600, acc: 0.788662, nmi: 0.807578
+    Training ite 50699, c_loss_z: 0.008409, c_loss_x: -0.296026, e_loss: -0.349945, g_loss: -4.482913
+    Training ite 50700, acc: 0.838842, nmi: 0.825106
+    Training ite 50799, c_loss_z: 0.004473, c_loss_x: -0.797139, e_loss: -0.498124, g_loss: -6.474725
+    Training ite 50800, acc: 0.718650, nmi: 0.778527
+    Training ite 50899, c_loss_z: 0.003459, c_loss_x: -0.246202, e_loss: -0.234995, g_loss: -7.240571
+    Training ite 50900, acc: 0.911158, nmi: 0.850475
+    Training ite 50999, c_loss_z: 0.003098, c_loss_x: -1.046723, e_loss: -0.512851, g_loss: -6.689807
+    Training ite 51000, acc: 0.913161, nmi: 0.850225
+    Training ite 51099, c_loss_z: -0.001323, c_loss_x: -0.411541, e_loss: -0.391714, g_loss: -7.061081
+    Training ite 51100, acc: 0.812600, nmi: 0.810354
+    Training ite 51199, c_loss_z: -0.003861, c_loss_x: -1.146299, e_loss: -0.349750, g_loss: -9.926524
+    Training ite 51200, acc: 0.845653, nmi: 0.821416
+    Training ite 51299, c_loss_z: 0.001066, c_loss_x: -0.703838, e_loss: -0.385872, g_loss: -11.671153
+    Training ite 51300, acc: 0.904447, nmi: 0.842402
+    Training ite 51399, c_loss_z: 0.000102, c_loss_x: -0.084577, e_loss: -0.165309, g_loss: -9.402369
+    Training ite 51400, acc: 0.922676, nmi: 0.861405
+    Training ite 51499, c_loss_z: 0.002141, c_loss_x: -0.282060, e_loss: -0.489250, g_loss: -6.888001
+    Training ite 51500, acc: 0.797877, nmi: 0.800962
+    Training ite 51599, c_loss_z: -0.000398, c_loss_x: -0.178212, e_loss: -0.461184, g_loss: -10.967495
+    Training ite 51600, acc: 0.821114, nmi: 0.815167
+    Training ite 51699, c_loss_z: 0.000085, c_loss_x: -0.133125, e_loss: -0.221075, g_loss: -6.543032
+    Training ite 51700, acc: 0.932692, nmi: 0.877957
+    Training ite 51799, c_loss_z: -0.004463, c_loss_x: -0.994253, e_loss: -0.368235, g_loss: -10.801970
+    Training ite 51800, acc: 0.929187, nmi: 0.871866
+    Training ite 51899, c_loss_z: 0.004265, c_loss_x: -0.730927, e_loss: -0.340510, g_loss: -9.586691
+    Training ite 51900, acc: 0.834736, nmi: 0.824949
+    Training ite 51999, c_loss_z: -0.000362, c_loss_x: 0.288056, e_loss: -0.267336, g_loss: -11.341453
+    Training ite 52000, acc: 0.832732, nmi: 0.826736
+    Training ite 52099, c_loss_z: 0.001760, c_loss_x: -0.465716, e_loss: -0.464934, g_loss: -8.142922
+    Training ite 52100, acc: 0.836839, nmi: 0.822891
+    Training ite 52199, c_loss_z: -0.000886, c_loss_x: -0.311068, e_loss: -0.206074, g_loss: -10.618185
+    Training ite 52200, acc: 0.818610, nmi: 0.815725
+    Training ite 52299, c_loss_z: -0.000745, c_loss_x: -0.331872, e_loss: -0.566694, g_loss: -7.163486
+    Training ite 52300, acc: 0.722456, nmi: 0.784767
+    Training ite 52399, c_loss_z: 0.003816, c_loss_x: -0.158465, e_loss: -0.238985, g_loss: -8.195664
+    Training ite 52400, acc: 0.714343, nmi: 0.774216
+    Training ite 52499, c_loss_z: 0.000825, c_loss_x: 1.025297, e_loss: -0.230898, g_loss: -4.977198
+    Training ite 52500, acc: 0.725861, nmi: 0.763611
+    Training ite 52599, c_loss_z: 0.002403, c_loss_x: -0.624439, e_loss: -0.377980, g_loss: -7.645237
+    Training ite 52600, acc: 0.707432, nmi: 0.758159
+    Training ite 52699, c_loss_z: -0.002547, c_loss_x: -0.901195, e_loss: -0.433329, g_loss: -8.801000
+    Training ite 52700, acc: 0.786859, nmi: 0.808232
+    Training ite 52799, c_loss_z: 0.004350, c_loss_x: -1.089303, e_loss: -0.360048, g_loss: -7.091442
+    Training ite 52800, acc: 0.821214, nmi: 0.808439
+    Training ite 52899, c_loss_z: -0.000127, c_loss_x: -1.156335, e_loss: -0.338134, g_loss: -8.585490
+    Training ite 52900, acc: 0.824119, nmi: 0.814382
+    Training ite 52999, c_loss_z: -0.001065, c_loss_x: -0.058986, e_loss: -0.354142, g_loss: -12.603621
+    Training ite 53000, acc: 0.778345, nmi: 0.801421
+    Training ite 53099, c_loss_z: -0.002084, c_loss_x: -0.964468, e_loss: -0.138100, g_loss: -6.559901
+    Training ite 53100, acc: 0.722756, nmi: 0.776511
+    Training ite 53199, c_loss_z: 0.001046, c_loss_x: -0.793592, e_loss: -0.054860, g_loss: -8.320138
+    Training ite 53200, acc: 0.830929, nmi: 0.816767
+    Training ite 53299, c_loss_z: 0.002346, c_loss_x: -0.091765, e_loss: -0.332935, g_loss: -8.365359
+    Training ite 53300, acc: 0.831931, nmi: 0.812219
+    Training ite 53399, c_loss_z: 0.004578, c_loss_x: -0.799368, e_loss: -0.228354, g_loss: -4.203401
+    Training ite 53400, acc: 0.791867, nmi: 0.808481
+    Training ite 53499, c_loss_z: -0.000656, c_loss_x: -0.008738, e_loss: -0.372536, g_loss: -5.808105
+    Training ite 53500, acc: 0.844952, nmi: 0.830530
+    Training ite 53599, c_loss_z: 0.000832, c_loss_x: 0.047214, e_loss: -0.254236, g_loss: -5.253126
+    Training ite 53600, acc: 0.797175, nmi: 0.814555
+    Training ite 53699, c_loss_z: 0.000141, c_loss_x: -0.382445, e_loss: -0.270297, g_loss: -7.100049
+    Training ite 53700, acc: 0.801883, nmi: 0.825876
+    Training ite 53799, c_loss_z: 0.003629, c_loss_x: -0.372872, e_loss: -0.376063, g_loss: -6.682659
+    Training ite 53800, acc: 0.806390, nmi: 0.828216
+    Training ite 53899, c_loss_z: 0.008505, c_loss_x: -0.221228, e_loss: -0.087789, g_loss: -7.462903
+    Training ite 53900, acc: 0.818810, nmi: 0.799479
+    Training ite 53999, c_loss_z: 0.000537, c_loss_x: -0.641987, e_loss: -0.196661, g_loss: -8.773410
+    Training ite 54000, acc: 0.808093, nmi: 0.820328
+    Training ite 54099, c_loss_z: 0.003299, c_loss_x: -0.280121, e_loss: -0.409644, g_loss: -5.219842
+    Training ite 54100, acc: 0.719952, nmi: 0.778723
+    Training ite 54199, c_loss_z: 0.000944, c_loss_x: -0.769760, e_loss: -0.168907, g_loss: -8.705142
+    Training ite 54200, acc: 0.796074, nmi: 0.821984
+    Training ite 54299, c_loss_z: -0.002464, c_loss_x: -0.580462, e_loss: -0.209930, g_loss: -4.094106
+    Training ite 54300, acc: 0.806490, nmi: 0.813617
+    Training ite 54399, c_loss_z: 0.000715, c_loss_x: -0.060005, e_loss: -0.403510, g_loss: -6.966300
+    Training ite 54400, acc: 0.730369, nmi: 0.771309
+    Training ite 54499, c_loss_z: -0.000061, c_loss_x: -0.719081, e_loss: -0.174828, g_loss: -8.665355
+    Training ite 54500, acc: 0.709936, nmi: 0.786246
+    Training ite 54599, c_loss_z: 0.001862, c_loss_x: -0.563156, e_loss: -0.265805, g_loss: -7.662987
+    Training ite 54600, acc: 0.703926, nmi: 0.769444
+    Training ite 54699, c_loss_z: -0.001908, c_loss_x: -0.495714, e_loss: -0.200431, g_loss: -7.705827
+    Training ite 54700, acc: 0.713041, nmi: 0.771080
+    Training ite 54799, c_loss_z: -0.000779, c_loss_x: -0.451375, e_loss: -0.332126, g_loss: -8.937043
+    Training ite 54800, acc: 0.724659, nmi: 0.792085
+    Training ite 54899, c_loss_z: 0.003852, c_loss_x: -0.429008, e_loss: -0.344176, g_loss: -10.306846
+    Training ite 54900, acc: 0.701823, nmi: 0.764060
+    Training ite 54999, c_loss_z: -0.003494, c_loss_x: -0.474714, e_loss: -0.336538, g_loss: -7.384473
+    Training ite 55000, acc: 0.714143, nmi: 0.792715
+    Training ite 55099, c_loss_z: -0.000873, c_loss_x: -0.516750, e_loss: -0.354001, g_loss: -8.698277
+    Training ite 55100, acc: 0.726863, nmi: 0.772758
+    Training ite 55199, c_loss_z: 0.005441, c_loss_x: -0.744488, e_loss: 0.038412, g_loss: -9.749357
+    Training ite 55200, acc: 0.823718, nmi: 0.807695
+    Training ite 55299, c_loss_z: -0.005468, c_loss_x: -0.498592, e_loss: -0.392508, g_loss: -7.085560
+    Training ite 55300, acc: 0.928786, nmi: 0.869780
+    Training ite 55399, c_loss_z: -0.004209, c_loss_x: -0.227586, e_loss: -0.227126, g_loss: -4.775468
+    Training ite 55400, acc: 0.848658, nmi: 0.820807
+    Training ite 55499, c_loss_z: 0.003686, c_loss_x: -0.523825, e_loss: -0.278686, g_loss: -6.198918
+    Training ite 55500, acc: 0.854968, nmi: 0.812101
+    Training ite 55599, c_loss_z: 0.007372, c_loss_x: -0.703372, e_loss: -0.422514, g_loss: -5.140480
+    Training ite 55600, acc: 0.831330, nmi: 0.829554
+    Training ite 55699, c_loss_z: 0.004161, c_loss_x: -0.254191, e_loss: -0.324280, g_loss: -7.715707
+    Training ite 55700, acc: 0.828526, nmi: 0.807265
+    Training ite 55799, c_loss_z: -0.001951, c_loss_x: -0.239589, e_loss: -0.188135, g_loss: -8.120581
+    Training ite 55800, acc: 0.820713, nmi: 0.827272
+    Training ite 55899, c_loss_z: 0.002270, c_loss_x: -0.536976, e_loss: -0.372045, g_loss: -6.162017
+    Training ite 55900, acc: 0.815905, nmi: 0.812018
+    Training ite 55999, c_loss_z: -0.003736, c_loss_x: 0.353932, e_loss: -0.122337, g_loss: -7.697074
+    Training ite 56000, acc: 0.834034, nmi: 0.817608
+    Training ite 56099, c_loss_z: 0.002070, c_loss_x: -0.435303, e_loss: -0.345414, g_loss: -9.725615
+    Training ite 56100, acc: 0.796474, nmi: 0.829362
+    Training ite 56199, c_loss_z: 0.001567, c_loss_x: -0.840016, e_loss: -0.180200, g_loss: -7.168093
+    Training ite 56200, acc: 0.792668, nmi: 0.813846
+    Training ite 56299, c_loss_z: -0.001838, c_loss_x: -0.329773, e_loss: -0.406491, g_loss: -9.852501
+    Training ite 56300, acc: 0.828726, nmi: 0.813640
+    Training ite 56399, c_loss_z: 0.001445, c_loss_x: 0.006631, e_loss: -0.266151, g_loss: -6.236228
+    Training ite 56400, acc: 0.795974, nmi: 0.807246
+    Training ite 56499, c_loss_z: 0.001100, c_loss_x: -0.303664, e_loss: -0.229491, g_loss: -7.993605
+    Training ite 56500, acc: 0.844451, nmi: 0.815925
+    Training ite 56599, c_loss_z: 0.002542, c_loss_x: -0.502022, e_loss: -0.381918, g_loss: -9.633995
+    Training ite 56600, acc: 0.741587, nmi: 0.774832
+    Training ite 56699, c_loss_z: -0.001979, c_loss_x: -1.213609, e_loss: -0.603943, g_loss: -5.033388
+    Training ite 56700, acc: 0.831631, nmi: 0.849011
+    Training ite 56799, c_loss_z: -0.001801, c_loss_x: -0.368072, e_loss: -0.195130, g_loss: -7.789944
+    Training ite 56800, acc: 0.825020, nmi: 0.811982
+    Training ite 56899, c_loss_z: 0.004145, c_loss_x: -0.796885, e_loss: -0.093522, g_loss: -9.390119
+    Training ite 56900, acc: 0.907853, nmi: 0.854433
+    Training ite 56999, c_loss_z: -0.001856, c_loss_x: -0.392028, e_loss: -0.396374, g_loss: -5.910584
+    Training ite 57000, acc: 0.903245, nmi: 0.845821
+    Training ite 57099, c_loss_z: -0.001246, c_loss_x: -0.876797, e_loss: -0.354223, g_loss: -10.021569
+    Training ite 57100, acc: 0.915765, nmi: 0.855304
+    Training ite 57199, c_loss_z: 0.001402, c_loss_x: -0.429032, e_loss: -0.542386, g_loss: -6.340742
+    Training ite 57200, acc: 0.840445, nmi: 0.817889
+    Training ite 57299, c_loss_z: -0.001631, c_loss_x: -0.529138, e_loss: -0.525268, g_loss: -6.935171
+    Training ite 57300, acc: 0.914964, nmi: 0.856722
+    Training ite 57399, c_loss_z: -0.001119, c_loss_x: -0.505700, e_loss: -0.386077, g_loss: -6.841418
+    Training ite 57400, acc: 0.898137, nmi: 0.840320
+    Training ite 57499, c_loss_z: -0.002669, c_loss_x: -0.069400, e_loss: -0.496404, g_loss: -2.786353
+    Training ite 57500, acc: 0.827224, nmi: 0.826021
+    Training ite 57599, c_loss_z: 0.007050, c_loss_x: -0.561272, e_loss: -0.146728, g_loss: -3.900869
+    Training ite 57600, acc: 0.839643, nmi: 0.850926
+    Training ite 57699, c_loss_z: -0.000200, c_loss_x: -0.415070, e_loss: -0.002765, g_loss: -10.637270
+    Training ite 57700, acc: 0.911859, nmi: 0.852406
+    Training ite 57799, c_loss_z: 0.001231, c_loss_x: -0.284806, e_loss: -0.332022, g_loss: -9.396745
+    Training ite 57800, acc: 0.939603, nmi: 0.886814
+    Training ite 57899, c_loss_z: -0.000630, c_loss_x: -0.421444, e_loss: -0.278659, g_loss: -10.060127
+    Training ite 57900, acc: 0.788261, nmi: 0.811976
+    Training ite 57999, c_loss_z: 0.006444, c_loss_x: -0.160664, e_loss: -0.459668, g_loss: -2.432915
+    Training ite 58000, acc: 0.814203, nmi: 0.819305
+    Training ite 58099, c_loss_z: -0.006207, c_loss_x: -0.474048, e_loss: -0.516976, g_loss: -8.233966
+    Training ite 58100, acc: 0.907452, nmi: 0.842867
+    Training ite 58199, c_loss_z: -0.005281, c_loss_x: -0.267562, e_loss: -0.503366, g_loss: -11.874408
+    Training ite 58200, acc: 0.718349, nmi: 0.805528
+    Training ite 58299, c_loss_z: -0.002396, c_loss_x: -0.366590, e_loss: -0.160089, g_loss: -9.597397
+    Training ite 58300, acc: 0.785256, nmi: 0.809178
+    Training ite 58399, c_loss_z: -0.002567, c_loss_x: -0.316115, e_loss: -0.226798, g_loss: -11.008119
+    Training ite 58400, acc: 0.819010, nmi: 0.811845
+    Training ite 58499, c_loss_z: 0.000321, c_loss_x: -0.584881, e_loss: -0.472351, g_loss: -9.470695
+    Training ite 58500, acc: 0.822015, nmi: 0.811583
+    Training ite 58599, c_loss_z: -0.000125, c_loss_x: 0.057358, e_loss: -0.317332, g_loss: -8.838845
+    Training ite 58600, acc: 0.791066, nmi: 0.814859
+    Training ite 58699, c_loss_z: 0.001732, c_loss_x: 0.150028, e_loss: -0.193906, g_loss: -11.048401
+    Training ite 58700, acc: 0.905349, nmi: 0.842377
+    Training ite 58799, c_loss_z: 0.002711, c_loss_x: -0.495176, e_loss: -0.479787, g_loss: -9.198013
+    Training ite 58800, acc: 0.720252, nmi: 0.811550
+    Training ite 58899, c_loss_z: 0.003310, c_loss_x: -0.312751, e_loss: -0.091910, g_loss: -8.298522
+    Training ite 58900, acc: 0.775240, nmi: 0.793686
+    Training ite 58999, c_loss_z: -0.001447, c_loss_x: -0.835768, e_loss: -0.152361, g_loss: -6.828353
+    Training ite 59000, acc: 0.926382, nmi: 0.862293
+    Training ite 59099, c_loss_z: -0.000802, c_loss_x: -1.049969, e_loss: -0.524337, g_loss: -6.248682
+    Training ite 59100, acc: 0.789964, nmi: 0.814457
+    Training ite 59199, c_loss_z: 0.000816, c_loss_x: -0.323163, e_loss: -0.333606, g_loss: -7.737106
+    Training ite 59200, acc: 0.921875, nmi: 0.863532
+    Training ite 59299, c_loss_z: 0.003176, c_loss_x: -0.465444, e_loss: -0.510534, g_loss: -6.668732
+    Training ite 59300, acc: 0.692909, nmi: 0.789892
+    Training ite 59399, c_loss_z: -0.003541, c_loss_x: -1.040535, e_loss: -0.477216, g_loss: -6.148885
+    Training ite 59400, acc: 0.816006, nmi: 0.815090
+    Training ite 59499, c_loss_z: -0.003242, c_loss_x: -0.223898, e_loss: -0.011913, g_loss: -7.526611
+    Training ite 59500, acc: 0.831330, nmi: 0.854342
+    Training ite 59599, c_loss_z: -0.000212, c_loss_x: 0.490451, e_loss: -0.487294, g_loss: -7.869726
+    Training ite 59600, acc: 0.930990, nmi: 0.869334
+    Training ite 59699, c_loss_z: -0.000501, c_loss_x: 0.481116, e_loss: -0.319106, g_loss: -5.877261
+    Training ite 59700, acc: 0.806991, nmi: 0.811512
+    Training ite 59799, c_loss_z: 0.000669, c_loss_x: 0.093418, e_loss: -0.523404, g_loss: -10.241362
+    Training ite 59800, acc: 0.799780, nmi: 0.815632
+    Training ite 59899, c_loss_z: 0.003693, c_loss_x: -0.390804, e_loss: 0.075246, g_loss: -7.302966
+    Training ite 59900, acc: 0.863982, nmi: 0.827715
+    Training ite 59999, c_loss_z: 0.002358, c_loss_x: -0.541945, e_loss: -0.375998, g_loss: -4.940540
+    (python_jie) hzhang2@h0:~/projects/zhijie$ 
